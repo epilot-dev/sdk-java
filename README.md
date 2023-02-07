@@ -8,7 +8,7 @@ Epilot is the digital foundation for sales, service, network and implementation 
 ### Gradle
 
 ```groovy
-implementation '::'
+implementation 'dev.epilot.sdk:epilot-sdk-java:1.0.0'
 ```
 <!-- End SDK Installation -->
 
@@ -74,13 +74,13 @@ DELETE /v1/access-tokens/api_5ZugdRXasLfWBypHi93Fk
 ```java
 package hello.world;
 
-import .SDK;
-import .models.shared.Security;
+import dev.epilot.sdk.EpilotApi;
+import dev.epilot.sdk.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            EpilotApi.Builder builder = EpilotApi.builder();
 
             builder.setSecurity(
                 new Security() {{
@@ -90,7 +90,7 @@ public class Application {
                 }}
             );
 
-            SDK sdk = builder.build();
+            EpilotApi sdk = builder.build();
 
             AttachActivityRequest req = new AttachActivityRequest() {{
                 pathParams = new AttachActivityPathParams() {{

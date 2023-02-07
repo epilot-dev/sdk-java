@@ -1,0 +1,5 @@
+java:
+    packagename: "dev.epilot.sdk" # The package name for the generated Java SDK. Defaults to `openapi`.
+    projectname: "epilot-sdk-java" # The project name for the generated Java SDK. Defaults to `openapi`.
+    version: "1.0.0" 
+sdkclassname: EpilotAPI
