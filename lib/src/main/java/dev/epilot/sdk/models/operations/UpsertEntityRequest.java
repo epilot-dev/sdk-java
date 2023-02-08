@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 import dev.epilot.sdk.utils.SpeakeasyMetadata;
+
 public class UpsertEntityRequest {
     public UpsertEntityPathParams pathParams;
     public UpsertEntityRequest withPathParams(UpsertEntityPathParams pathParams) {

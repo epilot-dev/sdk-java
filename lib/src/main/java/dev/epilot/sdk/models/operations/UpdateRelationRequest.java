@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 import dev.epilot.sdk.utils.SpeakeasyMetadata;
+
 public class UpdateRelationRequest {
     public UpdateRelationPathParams pathParams;
     public UpdateRelationRequest withPathParams(UpdateRelationPathParams pathParams) {

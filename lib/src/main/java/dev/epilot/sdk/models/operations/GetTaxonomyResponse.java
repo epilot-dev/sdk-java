@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class GetTaxonomyResponse {
     public String contentType;
     public GetTaxonomyResponse withContentType(String contentType) {

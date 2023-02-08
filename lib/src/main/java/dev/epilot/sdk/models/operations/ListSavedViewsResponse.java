@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class ListSavedViewsResponse {
     public String contentType;
     public ListSavedViewsResponse withContentType(String contentType) {
@@ -12,8 +13,8 @@ public class ListSavedViewsResponse {
         this.statusCode = statusCode;
         return this;
     }
-    public ListSavedViews200ApplicationJson listSavedViews200ApplicationJSONObject;
-    public ListSavedViewsResponse withListSavedViews200ApplicationJsonObject(ListSavedViews200ApplicationJson listSavedViews200ApplicationJSONObject) {
+    public ListSavedViews200ApplicationJSON listSavedViews200ApplicationJSONObject;
+    public ListSavedViewsResponse withListSavedViews200ApplicationJSONObject(ListSavedViews200ApplicationJSON listSavedViews200ApplicationJSONObject) {
         this.listSavedViews200ApplicationJSONObject = listSavedViews200ApplicationJSONObject;
         return this;
     }

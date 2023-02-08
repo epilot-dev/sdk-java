@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class ImportEntitiesResponse {
     public String contentType;
     public ImportEntitiesResponse withContentType(String contentType) {

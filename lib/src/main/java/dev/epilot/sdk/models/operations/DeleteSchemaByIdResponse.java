@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class DeleteSchemaByIdResponse {
     public String contentType;
     public DeleteSchemaByIdResponse withContentType(String contentType) {

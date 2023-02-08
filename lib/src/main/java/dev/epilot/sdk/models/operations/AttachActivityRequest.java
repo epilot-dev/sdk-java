@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class AttachActivityRequest {
     public AttachActivityPathParams pathParams;
     public AttachActivityRequest withPathParams(AttachActivityPathParams pathParams) {

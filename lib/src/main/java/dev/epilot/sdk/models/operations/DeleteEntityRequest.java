@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class DeleteEntityRequest {
     public DeleteEntityPathParams pathParams;
     public DeleteEntityRequest withPathParams(DeleteEntityPathParams pathParams) {

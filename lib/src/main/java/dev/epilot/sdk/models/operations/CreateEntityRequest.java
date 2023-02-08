@@ -1,6 +1,8 @@
 package dev.epilot.sdk.models.operations;
 
 import dev.epilot.sdk.utils.SpeakeasyMetadata;
+import java.time.OffsetDateTime;
+
 public class CreateEntityRequest {
     public CreateEntityPathParams pathParams;
     public CreateEntityRequest withPathParams(CreateEntityPathParams pathParams) {

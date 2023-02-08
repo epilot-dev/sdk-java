@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class RemoveJourneyResponse {
     public String contentType;
     public RemoveJourneyResponse withContentType(String contentType) {

@@ -1,13 +1,15 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import java.time.OffsetDateTime;
 
 /**
  * CartCheckoutAction
  * Creates an order entity with prices from journey
-**/public class CartCheckoutAction {
+**/
+public class CartCheckoutAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_failure")
     public Boolean allowFailure;

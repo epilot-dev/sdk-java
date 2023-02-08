@@ -1,6 +1,8 @@
 package dev.epilot.sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.time.OffsetDateTime;
+
 public class SearchAutomationsResp {
     @JsonProperty("results")
     public AutomationFlow[] results;

@@ -1,13 +1,14 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CurrencyAttributeCurrency1
  * A currency configuration
-**/public class CurrencyAttributeCurrency1 {
+**/
+public class CurrencyAttributeCurrency1 {
     @JsonProperty("code")
     public String code;
     public CurrencyAttributeCurrency1 withCode(String code) {

@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class AttachActivityResponse {
     public dev.epilot.sdk.models.shared.ActivityItem activityItem;
     public AttachActivityResponse withActivityItem(dev.epilot.sdk.models.shared.ActivityItem activityItem) {

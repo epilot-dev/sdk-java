@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class DeleteSavedViewResponse {
     public String contentType;
     public DeleteSavedViewResponse withContentType(String contentType) {

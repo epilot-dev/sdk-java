@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class DeleteEntityResponse {
     public String contentType;
     public DeleteEntityResponse withContentType(String contentType) {

@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class CreateNewSchemaVersionResponse {
     public String contentType;
     public CreateNewSchemaVersionResponse withContentType(String contentType) {

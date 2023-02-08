@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class GetSchemaResponse {
     public String contentType;
     public GetSchemaResponse withContentType(String contentType) {

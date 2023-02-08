@@ -1,13 +1,15 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import java.time.OffsetDateTime;
 
 /**
  * OrderedListAttribute
  * Type of attribute to render N number of ordered fields
-**/public class OrderedListAttribute {
+**/
+public class OrderedListAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_purpose")
     public String[] purpose;

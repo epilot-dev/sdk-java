@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class CancelExecutionResponse {
     public dev.epilot.sdk.models.shared.AutomationExecution automationExecution;
     public CancelExecutionResponse withAutomationExecution(dev.epilot.sdk.models.shared.AutomationExecution automationExecution) {

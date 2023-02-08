@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class ListTaxonomyClassificationsForSchemaRequest {
     public ListTaxonomyClassificationsForSchemaPathParams pathParams;
     public ListTaxonomyClassificationsForSchemaRequest withPathParams(ListTaxonomyClassificationsForSchemaPathParams pathParams) {

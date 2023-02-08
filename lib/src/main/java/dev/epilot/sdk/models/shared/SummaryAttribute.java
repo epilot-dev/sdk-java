@@ -1,8 +1,8 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SummaryAttribute
@@ -18,7 +18,8 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
  * ```
  * The value field supports handlebar expressions from which you can pick any field from the entity state.
  * 
-**/public class SummaryAttribute {
+**/
+public class SummaryAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feature_flag")
     public String featureFlag;

@@ -1,11 +1,12 @@
 package dev.epilot.sdk;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.epilot.sdk.utils.HTTPClient;
 import dev.epilot.sdk.utils.HTTPRequest;
-import java.net.http.HttpResponse;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.nio.charset.StandardCharsets;
 import dev.epilot.sdk.utils.SerializedBody;
+import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
+import java.time.OffsetDateTime;
 import org.apache.http.NameValuePair;
 
 public class Schemas {
@@ -24,8 +25,7 @@ public class Schemas {
 		this._sdkVersion = sdkVersion;
 		this._genVersion = genVersion;
 	}
-	
-	
+    
     /**
      * createNewSchemaVersion - createNewSchemaVersion
      *
@@ -71,8 +71,7 @@ public class Schemas {
 
         return res;
     }
-	
-	
+    
     /**
      * deleteSchemaById - deleteSchemaById
      *
@@ -109,8 +108,7 @@ public class Schemas {
 
         return res;
     }
-	
-	
+    
     /**
      * getSchema - getSchema
      *
@@ -154,8 +152,7 @@ public class Schemas {
 
         return res;
     }
-	
-	
+    
     /**
      * getSchemaVersions - getSchemaVersions
      *
@@ -186,15 +183,14 @@ public class Schemas {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = new ObjectMapper();
                 mapper.findAndRegisterModules();
-                dev.epilot.sdk.models.operations.GetSchemaVersions200ApplicationJson out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.GetSchemaVersions200ApplicationJson.class);
+                dev.epilot.sdk.models.operations.GetSchemaVersions200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.GetSchemaVersions200ApplicationJSON.class);
                 res.getSchemaVersions200ApplicationJSONObject = out;
             }
         }
 
         return res;
     }
-	
-	
+    
     /**
      * listSchemaBlueprints - listSchemaBlueprints
      *
@@ -225,15 +221,14 @@ public class Schemas {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = new ObjectMapper();
                 mapper.findAndRegisterModules();
-                dev.epilot.sdk.models.operations.ListSchemaBlueprints200ApplicationJson out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.ListSchemaBlueprints200ApplicationJson.class);
+                dev.epilot.sdk.models.operations.ListSchemaBlueprints200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.ListSchemaBlueprints200ApplicationJSON.class);
                 res.listSchemaBlueprints200ApplicationJSONObject = out;
             }
         }
 
         return res;
     }
-	
-	
+    
     /**
      * listSchemas - listSchemas
      *
@@ -270,15 +265,14 @@ public class Schemas {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = new ObjectMapper();
                 mapper.findAndRegisterModules();
-                dev.epilot.sdk.models.operations.ListSchemas200ApplicationJson out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.ListSchemas200ApplicationJson.class);
+                dev.epilot.sdk.models.operations.ListSchemas200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.ListSchemas200ApplicationJSON.class);
                 res.listSchemas200ApplicationJSONObject = out;
             }
         }
 
         return res;
     }
-	
-	
+    
     /**
      * listTaxonomyClassificationsForSchema - listTaxonomyClassificationsForSchema
      *
@@ -315,12 +309,11 @@ public class Schemas {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = new ObjectMapper();
                 mapper.findAndRegisterModules();
-                dev.epilot.sdk.models.operations.ListTaxonomyClassificationsForSchema200ApplicationJson out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.ListTaxonomyClassificationsForSchema200ApplicationJson.class);
+                dev.epilot.sdk.models.operations.ListTaxonomyClassificationsForSchema200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.ListTaxonomyClassificationsForSchema200ApplicationJSON.class);
                 res.listTaxonomyClassificationsForSchema200ApplicationJSONObject = out;
             }
         }
 
         return res;
     }
-	
 }

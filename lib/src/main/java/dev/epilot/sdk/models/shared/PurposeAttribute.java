@@ -1,18 +1,19 @@
 package dev.epilot.sdk.models.shared;
 
-import java.time.OffsetDateTime;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import dev.epilot.sdk.utils.DateTimeSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import dev.epilot.sdk.utils.DateTimeDeserializer;
+import dev.epilot.sdk.utils.DateTimeSerializer;
+import java.time.OffsetDateTime;
 
 /**
  * PurposeAttribute
  * Entity Taxonomy
-**/public class PurposeAttribute {
+**/
+public class PurposeAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_purpose")
     public String[] purpose;

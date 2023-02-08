@@ -1,11 +1,12 @@
 package dev.epilot.sdk;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.epilot.sdk.utils.HTTPClient;
 import dev.epilot.sdk.utils.HTTPRequest;
-import java.net.http.HttpResponse;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.nio.charset.StandardCharsets;
 import dev.epilot.sdk.utils.SerializedBody;
+import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
+import java.time.OffsetDateTime;
 import org.apache.http.NameValuePair;
 
 public class Activity {
@@ -24,8 +25,7 @@ public class Activity {
 		this._sdkVersion = sdkVersion;
 		this._genVersion = genVersion;
 	}
-	
-	
+    
     /**
      * attachActivity - attachActivity
      *
@@ -69,8 +69,7 @@ public class Activity {
 
         return res;
     }
-	
-	
+    
     /**
      * createActivity - createActivity
      *
@@ -120,8 +119,7 @@ public class Activity {
 
         return res;
     }
-	
-	
+    
     /**
      * getActivity - getActivity
      *
@@ -165,8 +163,7 @@ public class Activity {
 
         return res;
     }
-	
-	
+    
     /**
      * getEntityActivityFeed - getEntityActivityFeed
      *
@@ -204,12 +201,11 @@ public class Activity {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = new ObjectMapper();
                 mapper.findAndRegisterModules();
-                dev.epilot.sdk.models.operations.GetEntityActivityFeed200ApplicationJson out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.GetEntityActivityFeed200ApplicationJson.class);
+                dev.epilot.sdk.models.operations.GetEntityActivityFeed200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.GetEntityActivityFeed200ApplicationJSON.class);
                 res.getEntityActivityFeed200ApplicationJSONObject = out;
             }
         }
 
         return res;
     }
-	
 }

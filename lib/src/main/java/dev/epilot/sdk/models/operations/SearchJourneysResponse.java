@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class SearchJourneysResponse {
     public String contentType;
     public SearchJourneysResponse withContentType(String contentType) {

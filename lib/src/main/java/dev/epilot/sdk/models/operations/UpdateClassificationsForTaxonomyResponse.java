@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class UpdateClassificationsForTaxonomyResponse {
     public String contentType;
     public UpdateClassificationsForTaxonomyResponse withContentType(String contentType) {
@@ -12,8 +13,8 @@ public class UpdateClassificationsForTaxonomyResponse {
         this.statusCode = statusCode;
         return this;
     }
-    public UpdateClassificationsForTaxonomy200ApplicationJson updateClassificationsForTaxonomy200ApplicationJSONObject;
-    public UpdateClassificationsForTaxonomyResponse withUpdateClassificationsForTaxonomy200ApplicationJsonObject(UpdateClassificationsForTaxonomy200ApplicationJson updateClassificationsForTaxonomy200ApplicationJSONObject) {
+    public UpdateClassificationsForTaxonomy200ApplicationJSON updateClassificationsForTaxonomy200ApplicationJSONObject;
+    public UpdateClassificationsForTaxonomyResponse withUpdateClassificationsForTaxonomy200ApplicationJSONObject(UpdateClassificationsForTaxonomy200ApplicationJSON updateClassificationsForTaxonomy200ApplicationJSONObject) {
         this.updateClassificationsForTaxonomy200ApplicationJSONObject = updateClassificationsForTaxonomy200ApplicationJSONObject;
         return this;
     }

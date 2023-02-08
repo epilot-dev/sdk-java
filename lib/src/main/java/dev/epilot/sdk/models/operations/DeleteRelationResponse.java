@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class DeleteRelationResponse {
     public String contentType;
     public DeleteRelationResponse withContentType(String contentType) {

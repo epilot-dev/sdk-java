@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class GetSchemaRequest {
     public GetSchemaPathParams pathParams;
     public GetSchemaRequest withPathParams(GetSchemaPathParams pathParams) {

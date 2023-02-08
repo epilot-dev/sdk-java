@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class ListSchemaBlueprintsResponse {
     public String contentType;
     public ListSchemaBlueprintsResponse withContentType(String contentType) {
@@ -12,8 +13,8 @@ public class ListSchemaBlueprintsResponse {
         this.statusCode = statusCode;
         return this;
     }
-    public ListSchemaBlueprints200ApplicationJson listSchemaBlueprints200ApplicationJSONObject;
-    public ListSchemaBlueprintsResponse withListSchemaBlueprints200ApplicationJsonObject(ListSchemaBlueprints200ApplicationJson listSchemaBlueprints200ApplicationJSONObject) {
+    public ListSchemaBlueprints200ApplicationJSON listSchemaBlueprints200ApplicationJSONObject;
+    public ListSchemaBlueprintsResponse withListSchemaBlueprints200ApplicationJSONObject(ListSchemaBlueprints200ApplicationJSON listSchemaBlueprints200ApplicationJSONObject) {
         this.listSchemaBlueprints200ApplicationJSONObject = listSchemaBlueprints200ApplicationJSONObject;
         return this;
     }

@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class ReceivedEmailTrigger {
     @JsonProperty("configuration")
     public ReceivedEmailTriggerConfiguration configuration;

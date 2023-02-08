@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class ActivityTrigger {
     @JsonProperty("configuration")
     public ActivityTriggerConfiguration configuration;

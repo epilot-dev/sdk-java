@@ -1,11 +1,12 @@
 package dev.epilot.sdk;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.epilot.sdk.utils.HTTPClient;
 import dev.epilot.sdk.utils.HTTPRequest;
-import java.net.http.HttpResponse;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.nio.charset.StandardCharsets;
 import dev.epilot.sdk.utils.SerializedBody;
+import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
+import java.time.OffsetDateTime;
 import org.apache.http.NameValuePair;
 
 public class Entities {
@@ -24,8 +25,7 @@ public class Entities {
 		this._sdkVersion = sdkVersion;
 		this._genVersion = genVersion;
 	}
-	
-	
+    
     /**
      * autocomplete - autocomplete
      *
@@ -63,15 +63,14 @@ public class Entities {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = new ObjectMapper();
                 mapper.findAndRegisterModules();
-                dev.epilot.sdk.models.operations.Autocomplete200ApplicationJson out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.Autocomplete200ApplicationJson.class);
+                dev.epilot.sdk.models.operations.Autocomplete200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.Autocomplete200ApplicationJSON.class);
                 res.autocomplete200ApplicationJSONObject = out;
             }
         }
 
         return res;
     }
-	
-	
+    
     /**
      * createEntity - createEntity
      *
@@ -142,8 +141,7 @@ public class Entities {
 
         return res;
     }
-	
-	
+    
     /**
      * deleteEntity - deleteEntity
      *
@@ -185,8 +183,7 @@ public class Entities {
 
         return res;
     }
-	
-	
+    
     /**
      * getEntity - getEntity
      *
@@ -286,15 +283,14 @@ public class Entities {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = new ObjectMapper();
                 mapper.findAndRegisterModules();
-                dev.epilot.sdk.models.operations.GetEntity200ApplicationJson out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.GetEntity200ApplicationJson.class);
+                dev.epilot.sdk.models.operations.GetEntity200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.GetEntity200ApplicationJSON.class);
                 res.getEntity200ApplicationJSONObject = out;
             }
         }
 
         return res;
     }
-	
-	
+    
     /**
      * searchEntities - searchEntities
      *
@@ -404,8 +400,7 @@ public class Entities {
 
         return res;
     }
-	
-	
+    
     /**
      * updateEntity - updateEntity
      *
@@ -476,8 +471,7 @@ public class Entities {
 
         return res;
     }
-	
-	
+    
     /**
      * upsertEntity - upsertEntity
      *
@@ -543,5 +537,4 @@ public class Entities {
 
         return res;
     }
-	
 }

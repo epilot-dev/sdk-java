@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 import dev.epilot.sdk.utils.SpeakeasyMetadata;
+
 public class CreateNewSchemaVersionRequest {
     public CreateNewSchemaVersionPathParams pathParams;
     public CreateNewSchemaVersionRequest withPathParams(CreateNewSchemaVersionPathParams pathParams) {

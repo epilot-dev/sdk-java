@@ -1,5 +1,6 @@
 package dev.epilot.sdk.models.operations;
 
+import java.time.OffsetDateTime;
 
 public class UpdateEntityResponse {
     public String contentType;

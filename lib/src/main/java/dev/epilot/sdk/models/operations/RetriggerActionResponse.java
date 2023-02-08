@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class RetriggerActionResponse {
     public String contentType;
     public RetriggerActionResponse withContentType(String contentType) {

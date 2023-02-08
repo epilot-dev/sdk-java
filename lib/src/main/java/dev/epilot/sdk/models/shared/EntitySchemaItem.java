@@ -1,13 +1,15 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import java.time.OffsetDateTime;
 
 /**
  * EntitySchemaItem
  * The "type" of an Entity. Describes the shape. Includes Entity Attributes, Relations and Capabilities.
-**/public class EntitySchemaItem {
+**/
+public class EntitySchemaItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public Object[] attributes;

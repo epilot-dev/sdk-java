@@ -1,11 +1,12 @@
 package dev.epilot.sdk;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.epilot.sdk.utils.HTTPClient;
 import dev.epilot.sdk.utils.HTTPRequest;
-import java.net.http.HttpResponse;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.nio.charset.StandardCharsets;
 import dev.epilot.sdk.utils.SerializedBody;
+import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
+import java.time.OffsetDateTime;
 import org.apache.http.NameValuePair;
 
 public class Journeys {
@@ -24,8 +25,7 @@ public class Journeys {
 		this._sdkVersion = sdkVersion;
 		this._genVersion = genVersion;
 	}
-	
-	
+    
     /**
      * createJourney - createJourney
      *
@@ -65,8 +65,7 @@ public class Journeys {
 
         return res;
     }
-	
-	
+    
     /**
      * getJourney - getJourney
      *
@@ -110,8 +109,7 @@ public class Journeys {
 
         return res;
     }
-	
-	
+    
     /**
      * getJourneysByOrgId - getJourneysByOrgId
      *
@@ -149,8 +147,7 @@ public class Journeys {
 
         return res;
     }
-	
-	
+    
     /**
      * patchUpdateJourney - patchUpdateJourney
      *
@@ -190,8 +187,7 @@ public class Journeys {
 
         return res;
     }
-	
-	
+    
     /**
      * removeJourney - removeJourney
      *
@@ -222,8 +218,7 @@ public class Journeys {
 
         return res;
     }
-	
-	
+    
     /**
      * searchJourneys - searchJourneys
      *
@@ -263,8 +258,7 @@ public class Journeys {
 
         return res;
     }
-	
-	
+    
     /**
      * updateJourney - updateJourney
      *
@@ -304,5 +298,4 @@ public class Journeys {
 
         return res;
     }
-	
 }

@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 import dev.epilot.sdk.utils.SpeakeasyMetadata;
+
 public class DeleteRelationPathParams {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attribute")
     public String attribute;

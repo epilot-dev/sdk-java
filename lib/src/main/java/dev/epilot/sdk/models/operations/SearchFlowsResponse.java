@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class SearchFlowsResponse {
     public String contentType;
     public SearchFlowsResponse withContentType(String contentType) {

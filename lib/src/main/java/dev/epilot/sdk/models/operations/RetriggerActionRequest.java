@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 import dev.epilot.sdk.utils.SpeakeasyMetadata;
+
 public class RetriggerActionRequest {
     public RetriggerActionPathParams pathParams;
     public RetriggerActionRequest withPathParams(RetriggerActionPathParams pathParams) {

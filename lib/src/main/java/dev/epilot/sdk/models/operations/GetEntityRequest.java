@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class GetEntityRequest {
     public GetEntityPathParams pathParams;
     public GetEntityRequest withPathParams(GetEntityPathParams pathParams) {

@@ -2,8 +2,8 @@ package dev.epilot.sdk;
 
 import dev.epilot.sdk.utils.HTTPClient;
 import dev.epilot.sdk.utils.HTTPRequest;
-import java.net.http.HttpResponse;
 import dev.epilot.sdk.utils.SerializedBody;
+import java.net.http.HttpResponse;
 import org.apache.http.NameValuePair;
 
 public class Export {
@@ -22,8 +22,7 @@ public class Export {
 		this._sdkVersion = sdkVersion;
 		this._genVersion = genVersion;
 	}
-	
-	
+    
     /**
      * exportEntities - exportEntities
      *
@@ -62,8 +61,7 @@ public class Export {
 
         return res;
     }
-	
-	
+    
     /**
      * importEntities - importEntities
      *
@@ -102,5 +100,4 @@ public class Export {
 
         return res;
     }
-	
 }

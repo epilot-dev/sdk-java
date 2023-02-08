@@ -1,6 +1,8 @@
 package dev.epilot.sdk.models.operations;
 
 import dev.epilot.sdk.utils.SpeakeasyMetadata;
+import java.time.OffsetDateTime;
+
 public class AddRelationsRequest {
     public AddRelationsPathParams pathParams;
     public AddRelationsRequest withPathParams(AddRelationsPathParams pathParams) {

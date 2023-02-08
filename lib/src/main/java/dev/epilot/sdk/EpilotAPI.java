@@ -1,13 +1,10 @@
-
-
 package dev.epilot.sdk;
 
 import dev.epilot.sdk.utils.HTTPClient;
 import dev.epilot.sdk.utils.SpeakeasyHTTPClient;
 
 
-
-public class EpilotApi {
+public class EpilotAPI {
 	public static final String[] SERVERS = {
 		"https://journey-config.sls.epilot.io",
 	};
@@ -28,8 +25,8 @@ public class EpilotApi {
 	private dev.epilot.sdk.models.shared.Security _security;
 	private String _serverUrl;
 	private String _language = "java";
-	private String _sdkVersion = "1.0.0";
-	private String _genVersion = "0.0.2";
+	private String _sdkVersion = "1.1.0";
+	private String _genVersion = "1.1.1";
 
 	public static class Builder {
 		private HTTPClient client;
@@ -61,8 +58,8 @@ public class EpilotApi {
 			return this;
 		}
 		
-		public EpilotApi build() throws Exception {
-			return new EpilotApi(this.client, this.security, this.serverUrl, this.params);
+		public EpilotAPI build() throws Exception {
+			return new EpilotAPI(this.client, this.security, this.serverUrl, this.params);
 		}
 	}
 
@@ -70,7 +67,7 @@ public class EpilotApi {
 		return new Builder();
 	}
 
-	private EpilotApi(HTTPClient client, dev.epilot.sdk.models.shared.Security security, String serverUrl, java.util.Map<String, String> params) throws Exception {
+	private EpilotAPI(HTTPClient client, dev.epilot.sdk.models.shared.Security security, String serverUrl, java.util.Map<String, String> params) throws Exception {
 		this._defaultClient = client;
 		
 		if (this._defaultClient == null) {
@@ -184,5 +181,4 @@ public class EpilotApi {
 			this._genVersion
 		);
 	}
-	
 }

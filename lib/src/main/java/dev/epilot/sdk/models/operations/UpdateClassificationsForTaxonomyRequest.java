@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 import dev.epilot.sdk.utils.SpeakeasyMetadata;
+
 public class UpdateClassificationsForTaxonomyRequest {
     public UpdateClassificationsForTaxonomyPathParams pathParams;
     public UpdateClassificationsForTaxonomyRequest withPathParams(UpdateClassificationsForTaxonomyPathParams pathParams) {

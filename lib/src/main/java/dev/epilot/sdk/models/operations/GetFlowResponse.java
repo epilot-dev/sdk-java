@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class GetFlowResponse {
     public dev.epilot.sdk.models.shared.AutomationFlow automationFlow;
     public GetFlowResponse withAutomationFlow(dev.epilot.sdk.models.shared.AutomationFlow automationFlow) {

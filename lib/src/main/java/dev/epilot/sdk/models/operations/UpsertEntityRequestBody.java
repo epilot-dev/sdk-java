@@ -1,6 +1,8 @@
 package dev.epilot.sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.time.OffsetDateTime;
+
 public class UpsertEntityRequestBody {
     @JsonProperty("entity")
     public java.util.Map<String, Object> entity;

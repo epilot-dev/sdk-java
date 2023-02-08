@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class CreateSavedViewResponse {
     public String contentType;
     public CreateSavedViewResponse withContentType(String contentType) {

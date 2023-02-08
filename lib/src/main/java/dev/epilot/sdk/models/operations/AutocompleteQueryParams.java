@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 import dev.epilot.sdk.utils.SpeakeasyMetadata;
+
 public class AutocompleteQueryParams {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=attribute")
     public String attribute;

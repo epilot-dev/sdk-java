@@ -1,7 +1,8 @@
 package dev.epilot.sdk.models.operations;
 
-import java.time.OffsetDateTime;
 import dev.epilot.sdk.utils.SpeakeasyMetadata;
+import java.time.OffsetDateTime;
+
 public class GetEntityActivityFeedQueryParams {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
     public OffsetDateTime after;

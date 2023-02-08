@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class DeleteFlowResponse {
     public dev.epilot.sdk.models.shared.AutomationFlow automationFlow;
     public DeleteFlowResponse withAutomationFlow(dev.epilot.sdk.models.shared.AutomationFlow automationFlow) {

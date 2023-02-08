@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class GetExecutionResponse {
     public dev.epilot.sdk.models.shared.AutomationExecution automationExecution;
     public GetExecutionResponse withAutomationExecution(dev.epilot.sdk.models.shared.AutomationExecution automationExecution) {

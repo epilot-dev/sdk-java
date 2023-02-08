@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class SetValueMapper {
     @JsonProperty("mode")
     public MappingAttributeModeEnum mode;

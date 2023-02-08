@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 import dev.epilot.sdk.utils.SpeakeasyMetadata;
+
 public class PutFlowRequest {
     public PutFlowPathParams pathParams;
     public PutFlowRequest withPathParams(PutFlowPathParams pathParams) {

@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 import dev.epilot.sdk.utils.SpeakeasyMetadata;
+
 public class CreateActivityRequest {
     public CreateActivityQueryParams queryParams;
     public CreateActivityRequest withQueryParams(CreateActivityQueryParams queryParams) {

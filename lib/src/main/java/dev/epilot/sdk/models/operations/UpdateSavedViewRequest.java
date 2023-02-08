@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 import dev.epilot.sdk.utils.SpeakeasyMetadata;
+
 public class UpdateSavedViewRequest {
     public UpdateSavedViewPathParams pathParams;
     public UpdateSavedViewRequest withPathParams(UpdateSavedViewPathParams pathParams) {

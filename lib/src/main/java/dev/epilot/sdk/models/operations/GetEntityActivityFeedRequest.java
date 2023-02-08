@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class GetEntityActivityFeedRequest {
     public GetEntityActivityFeedPathParams pathParams;
     public GetEntityActivityFeedRequest withPathParams(GetEntityActivityFeedPathParams pathParams) {

@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 
+
 public class GetJourneyRequest {
     public GetJourneyPathParams pathParams;
     public GetJourneyRequest withPathParams(GetJourneyPathParams pathParams) {
