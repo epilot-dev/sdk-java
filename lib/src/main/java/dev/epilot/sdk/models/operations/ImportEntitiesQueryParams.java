@@ -9,4 +9,5 @@ public class ImportEntitiesQueryParams {
         this.jobId = jobId;
         return this;
     }
+    
 }

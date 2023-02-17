@@ -12,4 +12,5 @@ public class SearchJourneysResponseResultsCreatedBy {
         this.id = id;
         return this;
     }
+    
 }

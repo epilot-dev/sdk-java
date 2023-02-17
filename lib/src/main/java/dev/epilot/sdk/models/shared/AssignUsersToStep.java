@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 public class AssignUsersToStep {
     @JsonInclude(Include.NON_ABSENT)
@@ -13,6 +12,7 @@ public class AssignUsersToStep {
         this.stepId = stepId;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("step_name")
     public String stepName;
@@ -20,6 +20,7 @@ public class AssignUsersToStep {
         this.stepName = stepName;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_ids")
     public Double[] userIds;
@@ -27,4 +28,5 @@ public class AssignUsersToStep {
         this.userIds = userIds;
         return this;
     }
+    
 }

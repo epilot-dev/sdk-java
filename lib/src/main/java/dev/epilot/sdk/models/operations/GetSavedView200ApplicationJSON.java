@@ -12,4 +12,5 @@ public class GetSavedView200ApplicationJSON {
         this.view = view;
         return this;
     }
+    
 }

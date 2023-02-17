@@ -12,10 +12,12 @@ public class StatusAttributeOptions2 {
         this.title = title;
         return this;
     }
+    
     @JsonProperty("value")
     public String value;
     public StatusAttributeOptions2 withValue(String value) {
         this.value = value;
         return this;
     }
+    
 }

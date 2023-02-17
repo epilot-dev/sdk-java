@@ -9,4 +9,5 @@ public class JourneySubmitTriggerConfiguration {
         this.sourceId = sourceId;
         return this;
     }
+    
 }

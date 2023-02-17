@@ -16,4 +16,5 @@ public class SavedViewCreatedBy1 {
         this.userId = userId;
         return this;
     }
+    
 }

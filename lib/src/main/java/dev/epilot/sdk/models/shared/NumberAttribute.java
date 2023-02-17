@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 /**
  * NumberAttribute
@@ -17,6 +16,7 @@ public class NumberAttribute {
         this.purpose = purpose;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public java.util.Map<String, Object> constraints;
@@ -24,6 +24,7 @@ public class NumberAttribute {
         this.constraints = constraints;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_value")
     public Object defaultValue;
@@ -31,6 +32,7 @@ public class NumberAttribute {
         this.defaultValue = defaultValue;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecated")
     public Boolean deprecated;
@@ -38,6 +40,7 @@ public class NumberAttribute {
         this.deprecated = deprecated;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_builder_disable_edit")
     public Boolean entityBuilderDisableEdit;
@@ -45,6 +48,7 @@ public class NumberAttribute {
         this.entityBuilderDisableEdit = entityBuilderDisableEdit;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feature_flag")
     public String featureFlag;
@@ -52,6 +56,7 @@ public class NumberAttribute {
         this.featureFlag = featureFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public String format;
@@ -59,6 +64,7 @@ public class NumberAttribute {
         this.format = format;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public String group;
@@ -66,6 +72,7 @@ public class NumberAttribute {
         this.group = group;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden")
     public Boolean hidden;
@@ -73,6 +80,7 @@ public class NumberAttribute {
         this.hidden = hidden;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hide_label")
     public Boolean hideLabel;
@@ -80,6 +88,7 @@ public class NumberAttribute {
         this.hideLabel = hideLabel;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
@@ -87,12 +96,14 @@ public class NumberAttribute {
         this.icon = icon;
         return this;
     }
+    
     @JsonProperty("label")
     public String label;
     public NumberAttribute withLabel(String label) {
         this.label = label;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public String layout;
@@ -100,12 +111,14 @@ public class NumberAttribute {
         this.layout = layout;
         return this;
     }
+    
     @JsonProperty("name")
     public String name;
     public NumberAttribute withName(String name) {
         this.name = name;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Long order;
@@ -113,6 +126,7 @@ public class NumberAttribute {
         this.order = order;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeholder")
     public String placeholder;
@@ -120,6 +134,7 @@ public class NumberAttribute {
         this.placeholder = placeholder;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preview_value_formatter")
     public String previewValueFormatter;
@@ -127,6 +142,7 @@ public class NumberAttribute {
         this.previewValueFormatter = previewValueFormatter;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protected")
     public Boolean protected_;
@@ -134,6 +150,7 @@ public class NumberAttribute {
         this.protected_ = protected_;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readonly")
     public Boolean readonly;
@@ -141,6 +158,7 @@ public class NumberAttribute {
         this.readonly = readonly;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("render_condition")
     public String renderCondition;
@@ -148,6 +166,7 @@ public class NumberAttribute {
         this.renderCondition = renderCondition;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
@@ -155,6 +174,7 @@ public class NumberAttribute {
         this.required = required;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setting_flag")
     public String settingFlag;
@@ -162,6 +182,7 @@ public class NumberAttribute {
         this.settingFlag = settingFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_in_table")
     public Boolean showInTable;
@@ -169,6 +190,7 @@ public class NumberAttribute {
         this.showInTable = showInTable;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public NumberAttributeTypeEnum type;
@@ -176,6 +198,7 @@ public class NumberAttribute {
         this.type = type;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value_formatter")
     public String valueFormatter;
@@ -183,4 +206,5 @@ public class NumberAttribute {
         this.valueFormatter = valueFormatter;
         return this;
     }
+    
 }

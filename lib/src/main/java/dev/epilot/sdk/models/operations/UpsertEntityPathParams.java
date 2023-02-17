@@ -9,4 +9,5 @@ public class UpsertEntityPathParams {
         this.slug = slug;
         return this;
     }
+    
 }

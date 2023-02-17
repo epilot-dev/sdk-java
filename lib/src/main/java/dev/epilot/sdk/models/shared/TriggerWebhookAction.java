@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 public class TriggerWebhookAction {
     @JsonInclude(Include.NON_ABSENT)
@@ -13,6 +12,7 @@ public class TriggerWebhookAction {
         this.allowFailure = allowFailure;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public TriggerWebhookConfig config;
@@ -20,6 +20,7 @@ public class TriggerWebhookAction {
         this.config = config;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_automatically")
     public Boolean createdAutomatically;
@@ -27,6 +28,7 @@ public class TriggerWebhookAction {
         this.createdAutomatically = createdAutomatically;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_output")
     public ErrorOutput errorOutput;
@@ -34,6 +36,7 @@ public class TriggerWebhookAction {
         this.errorOutput = errorOutput;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("execution_status")
     public ExecutionStatusEnum executionStatus;
@@ -41,6 +44,7 @@ public class TriggerWebhookAction {
         this.executionStatus = executionStatus;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flow_action_id")
     public String flowActionId;
@@ -48,6 +52,7 @@ public class TriggerWebhookAction {
         this.flowActionId = flowActionId;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
@@ -55,6 +60,7 @@ public class TriggerWebhookAction {
         this.id = id;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
@@ -62,6 +68,7 @@ public class TriggerWebhookAction {
         this.name = name;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputs")
     public java.util.Map<String, Object> outputs;
@@ -69,6 +76,7 @@ public class TriggerWebhookAction {
         this.outputs = outputs;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retry_strategy")
     public RetryStrategyEnum retryStrategy;
@@ -76,6 +84,7 @@ public class TriggerWebhookAction {
         this.retryStrategy = retryStrategy;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("started_at")
     public String startedAt;
@@ -83,6 +92,7 @@ public class TriggerWebhookAction {
         this.startedAt = startedAt;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public Object type;
@@ -90,6 +100,7 @@ public class TriggerWebhookAction {
         this.type = type;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
@@ -97,4 +108,5 @@ public class TriggerWebhookAction {
         this.updatedAt = updatedAt;
         return this;
     }
+    
 }

@@ -12,6 +12,7 @@ public class EntitySchemaItemSource {
         this.id = id;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
@@ -19,4 +20,5 @@ public class EntitySchemaItemSource {
         this.type = type;
         return this;
     }
+    
 }

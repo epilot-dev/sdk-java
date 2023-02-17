@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 /**
  * SavedViewItem
@@ -17,12 +16,14 @@ public class SavedViewItem {
         this.createdAt = createdAt;
         return this;
     }
+    
     @JsonProperty("created_by")
     public Object createdBy;
     public SavedViewItem withCreatedBy(Object createdBy) {
         this.createdBy = createdBy;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
@@ -30,12 +31,14 @@ public class SavedViewItem {
         this.id = id;
         return this;
     }
+    
     @JsonProperty("name")
     public String name;
     public SavedViewItem withName(String name) {
         this.name = name;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org")
     public String org;
@@ -43,6 +46,7 @@ public class SavedViewItem {
         this.org = org;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shared")
     public Boolean shared;
@@ -50,18 +54,21 @@ public class SavedViewItem {
         this.shared = shared;
         return this;
     }
+    
     @JsonProperty("slug")
     public String[] slug;
     public SavedViewItem withSlug(String[] slug) {
         this.slug = slug;
         return this;
     }
+    
     @JsonProperty("ui_config")
     public java.util.Map<String, Object> uiConfig;
     public SavedViewItem withUiConfig(java.util.Map<String, Object> uiConfig) {
         this.uiConfig = uiConfig;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
@@ -69,4 +76,5 @@ public class SavedViewItem {
         this.updatedAt = updatedAt;
         return this;
     }
+    
 }

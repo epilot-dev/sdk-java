@@ -16,4 +16,5 @@ public class SavedViewItemCreatedBy1 {
         this.userId = userId;
         return this;
     }
+    
 }

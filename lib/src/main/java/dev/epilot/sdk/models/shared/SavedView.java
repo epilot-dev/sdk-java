@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 /**
  * SavedView
@@ -16,12 +15,14 @@ public class SavedView {
         this.createdBy = createdBy;
         return this;
     }
+    
     @JsonProperty("name")
     public String name;
     public SavedView withName(String name) {
         this.name = name;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org")
     public String org;
@@ -29,6 +30,7 @@ public class SavedView {
         this.org = org;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shared")
     public Boolean shared;
@@ -36,16 +38,19 @@ public class SavedView {
         this.shared = shared;
         return this;
     }
+    
     @JsonProperty("slug")
     public String[] slug;
     public SavedView withSlug(String[] slug) {
         this.slug = slug;
         return this;
     }
+    
     @JsonProperty("ui_config")
     public java.util.Map<String, Object> uiConfig;
     public SavedView withUiConfig(java.util.Map<String, Object> uiConfig) {
         this.uiConfig = uiConfig;
         return this;
     }
+    
 }

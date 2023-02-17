@@ -8,9 +8,11 @@ public class ListTaxonomyClassificationsForSchemaRequest {
         this.pathParams = pathParams;
         return this;
     }
+    
     public ListTaxonomyClassificationsForSchemaQueryParams queryParams;
     public ListTaxonomyClassificationsForSchemaRequest withQueryParams(ListTaxonomyClassificationsForSchemaQueryParams queryParams) {
         this.queryParams = queryParams;
         return this;
     }
+    
 }

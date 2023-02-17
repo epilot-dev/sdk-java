@@ -16,6 +16,7 @@ lib/src/main/java/dev/epilot/sdk/utils/FormMetadata.java
 lib/src/main/java/dev/epilot/sdk/utils/HTTPClient.java
 lib/src/main/java/dev/epilot/sdk/utils/HTTPRequest.java
 lib/src/main/java/dev/epilot/sdk/utils/HeaderMetadata.java
+lib/src/main/java/dev/epilot/sdk/utils/JSON.java
 lib/src/main/java/dev/epilot/sdk/utils/Metadata.java
 lib/src/main/java/dev/epilot/sdk/utils/MultipartFormMetadata.java
 lib/src/main/java/dev/epilot/sdk/utils/PathParamsMetadata.java

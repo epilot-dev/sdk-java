@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 /**
  * RelationAttribute
@@ -17,6 +16,7 @@ public class RelationAttribute {
         this.purpose = purpose;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public RelationAttributeActions[] actions;
@@ -24,6 +24,7 @@ public class RelationAttribute {
         this.actions = actions;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("add_button_label")
     public String addButtonLabel;
@@ -31,6 +32,7 @@ public class RelationAttribute {
         this.addButtonLabel = addButtonLabel;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedSchemas")
     public String[] allowedSchemas;
@@ -38,6 +40,7 @@ public class RelationAttribute {
         this.allowedSchemas = allowedSchemas;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public java.util.Map<String, Object> constraints;
@@ -45,6 +48,7 @@ public class RelationAttribute {
         this.constraints = constraints;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_value")
     public Object defaultValue;
@@ -52,6 +56,7 @@ public class RelationAttribute {
         this.defaultValue = defaultValue;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecated")
     public Boolean deprecated;
@@ -59,6 +64,7 @@ public class RelationAttribute {
         this.deprecated = deprecated;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details_view_mode_enabled")
     public Boolean detailsViewModeEnabled;
@@ -66,6 +72,7 @@ public class RelationAttribute {
         this.detailsViewModeEnabled = detailsViewModeEnabled;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drawer_size")
     public RelationAttributeDrawerSizeEnum drawerSize;
@@ -73,6 +80,7 @@ public class RelationAttribute {
         this.drawerSize = drawerSize;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("edit_mode")
     public RelationAttributeEditModeEnum editMode;
@@ -80,6 +88,7 @@ public class RelationAttribute {
         this.editMode = editMode;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable_relation_picker")
     public Boolean enableRelationPicker;
@@ -87,6 +96,7 @@ public class RelationAttribute {
         this.enableRelationPicker = enableRelationPicker;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable_relation_tags")
     public Boolean enableRelationTags;
@@ -94,6 +104,7 @@ public class RelationAttribute {
         this.enableRelationTags = enableRelationTags;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_builder_disable_edit")
     public Boolean entityBuilderDisableEdit;
@@ -101,6 +112,7 @@ public class RelationAttribute {
         this.entityBuilderDisableEdit = entityBuilderDisableEdit;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feature_flag")
     public String featureFlag;
@@ -108,6 +120,7 @@ public class RelationAttribute {
         this.featureFlag = featureFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public String group;
@@ -115,6 +128,7 @@ public class RelationAttribute {
         this.group = group;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_primary")
     public Boolean hasPrimary;
@@ -122,6 +136,7 @@ public class RelationAttribute {
         this.hasPrimary = hasPrimary;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden")
     public Boolean hidden;
@@ -129,6 +144,7 @@ public class RelationAttribute {
         this.hidden = hidden;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hide_label")
     public Boolean hideLabel;
@@ -136,6 +152,7 @@ public class RelationAttribute {
         this.hideLabel = hideLabel;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
@@ -143,12 +160,14 @@ public class RelationAttribute {
         this.icon = icon;
         return this;
     }
+    
     @JsonProperty("label")
     public String label;
     public RelationAttribute withLabel(String label) {
         this.label = label;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public String layout;
@@ -156,12 +175,14 @@ public class RelationAttribute {
         this.layout = layout;
         return this;
     }
+    
     @JsonProperty("name")
     public String name;
     public RelationAttribute withName(String name) {
         this.name = name;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Long order;
@@ -169,6 +190,7 @@ public class RelationAttribute {
         this.order = order;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeholder")
     public String placeholder;
@@ -176,6 +198,7 @@ public class RelationAttribute {
         this.placeholder = placeholder;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preview_value_formatter")
     public String previewValueFormatter;
@@ -183,6 +206,7 @@ public class RelationAttribute {
         this.previewValueFormatter = previewValueFormatter;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protected")
     public Boolean protected_;
@@ -190,6 +214,7 @@ public class RelationAttribute {
         this.protected_ = protected_;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readonly")
     public Boolean readonly;
@@ -197,6 +222,7 @@ public class RelationAttribute {
         this.readonly = readonly;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relation_affinity_mode")
     public RelationAttributeRelationAffinityModeEnum relationAffinityMode;
@@ -204,6 +230,7 @@ public class RelationAttribute {
         this.relationAffinityMode = relationAffinityMode;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relation_type")
     public RelationAttributeRelationTypeEnum relationType;
@@ -211,6 +238,7 @@ public class RelationAttribute {
         this.relationType = relationType;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("render_condition")
     public String renderCondition;
@@ -218,6 +246,7 @@ public class RelationAttribute {
         this.renderCondition = renderCondition;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
@@ -225,6 +254,7 @@ public class RelationAttribute {
         this.required = required;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reverse_attributes")
     public java.util.Map<String, String> reverseAttributes;
@@ -232,6 +262,7 @@ public class RelationAttribute {
         this.reverseAttributes = reverseAttributes;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search_placeholder")
     public String searchPlaceholder;
@@ -239,6 +270,7 @@ public class RelationAttribute {
         this.searchPlaceholder = searchPlaceholder;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setting_flag")
     public String settingFlag;
@@ -246,6 +278,7 @@ public class RelationAttribute {
         this.settingFlag = settingFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_in_table")
     public Boolean showInTable;
@@ -253,6 +286,7 @@ public class RelationAttribute {
         this.showInTable = showInTable;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary_fields")
     public Object[] summaryFields;
@@ -260,6 +294,7 @@ public class RelationAttribute {
         this.summaryFields = summaryFields;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public RelationAttributeTypeEnum type;
@@ -267,6 +302,7 @@ public class RelationAttribute {
         this.type = type;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value_formatter")
     public String valueFormatter;
@@ -274,4 +310,5 @@ public class RelationAttribute {
         this.valueFormatter = valueFormatter;
         return this;
     }
+    
 }

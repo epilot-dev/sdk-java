@@ -8,9 +8,11 @@ public class GetSchemaRequest {
         this.pathParams = pathParams;
         return this;
     }
+    
     public GetSchemaQueryParams queryParams;
     public GetSchemaRequest withQueryParams(GetSchemaQueryParams queryParams) {
         this.queryParams = queryParams;
         return this;
     }
+    
 }

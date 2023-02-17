@@ -9,10 +9,12 @@ public class JourneySubmitTrigger {
         this.configuration = configuration;
         return this;
     }
+    
     @JsonProperty("type")
     public JourneySubmitTriggerTypeEnum type;
     public JourneySubmitTrigger withType(JourneySubmitTriggerTypeEnum type) {
         this.type = type;
         return this;
     }
+    
 }

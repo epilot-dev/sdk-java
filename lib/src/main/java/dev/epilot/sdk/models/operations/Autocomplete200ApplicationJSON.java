@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.operations;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 public class Autocomplete200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
@@ -13,6 +12,7 @@ public class Autocomplete200ApplicationJSON {
         this.hits = hits;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public Object[] results;
@@ -20,4 +20,5 @@ public class Autocomplete200ApplicationJSON {
         this.results = results;
         return this;
     }
+    
 }

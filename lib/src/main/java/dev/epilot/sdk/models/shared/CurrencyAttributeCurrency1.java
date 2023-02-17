@@ -15,12 +15,14 @@ public class CurrencyAttributeCurrency1 {
         this.code = code;
         return this;
     }
+    
     @JsonProperty("description")
     public String description;
     public CurrencyAttributeCurrency1 withDescription(String description) {
         this.description = description;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flag")
     public String flag;
@@ -28,10 +30,12 @@ public class CurrencyAttributeCurrency1 {
         this.flag = flag;
         return this;
     }
+    
     @JsonProperty("symbol")
     public String symbol;
     public CurrencyAttributeCurrency1 withSymbol(String symbol) {
         this.symbol = symbol;
         return this;
     }
+    
 }

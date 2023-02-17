@@ -8,4 +8,5 @@ public class RemoveJourneyRequest {
         this.pathParams = pathParams;
         return this;
     }
+    
 }

@@ -8,4 +8,5 @@ public class GetSavedViewRequest {
         this.pathParams = pathParams;
         return this;
     }
+    
 }

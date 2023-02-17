@@ -11,6 +11,7 @@ public class MappingAttributeV2 {
         this.operation = operation;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public String target;
@@ -18,4 +19,5 @@ public class MappingAttributeV2 {
         this.target = target;
         return this;
     }
+    
 }

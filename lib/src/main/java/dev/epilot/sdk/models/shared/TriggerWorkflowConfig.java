@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 public class TriggerWorkflowConfig {
     @JsonInclude(Include.NON_ABSENT)
@@ -13,6 +12,7 @@ public class TriggerWorkflowConfig {
         this.assignSteps = assignSteps;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignees")
     public String[] assignees;
@@ -20,6 +20,7 @@ public class TriggerWorkflowConfig {
         this.assignees = assignees;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditions")
     public TriggerWorkflowCondition[] conditions;
@@ -27,6 +28,7 @@ public class TriggerWorkflowConfig {
         this.conditions = conditions;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_workflow")
     public String targetWorkflow;
@@ -34,4 +36,5 @@ public class TriggerWorkflowConfig {
         this.targetWorkflow = targetWorkflow;
         return this;
     }
+    
 }

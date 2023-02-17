@@ -9,4 +9,5 @@ public class UpdateClassificationsForTaxonomyPathParams {
         this.taxonomySlug = taxonomySlug;
         return this;
     }
+    
 }

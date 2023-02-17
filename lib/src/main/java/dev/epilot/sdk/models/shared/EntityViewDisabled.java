@@ -12,4 +12,5 @@ public class EntityViewDisabled {
         this.viewType = viewType;
         return this;
     }
+    
 }

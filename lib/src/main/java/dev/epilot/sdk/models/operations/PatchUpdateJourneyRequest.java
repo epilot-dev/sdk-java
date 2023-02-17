@@ -1,7 +1,6 @@
 package dev.epilot.sdk.models.operations;
 
 import dev.epilot.sdk.utils.SpeakeasyMetadata;
-import java.time.OffsetDateTime;
 
 public class PatchUpdateJourneyRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
@@ -10,4 +9,5 @@ public class PatchUpdateJourneyRequest {
         this.request = request;
         return this;
     }
+    
 }

@@ -8,10 +8,12 @@ public class RetriggerActionRequest {
         this.pathParams = pathParams;
         return this;
     }
+    
     @SpeakeasyMetadata("request:mediaType=application/json")
     public dev.epilot.sdk.models.shared.RetryReq request;
     public RetriggerActionRequest withRequest(dev.epilot.sdk.models.shared.RetryReq request) {
         this.request = request;
         return this;
     }
+    
 }

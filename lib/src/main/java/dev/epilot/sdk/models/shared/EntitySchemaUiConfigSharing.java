@@ -12,4 +12,5 @@ public class EntitySchemaUiConfigSharing {
         this.showSharingButton = showSharingButton;
         return this;
     }
+    
 }

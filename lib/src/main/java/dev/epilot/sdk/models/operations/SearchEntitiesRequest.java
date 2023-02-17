@@ -9,4 +9,5 @@ public class SearchEntitiesRequest {
         this.request = request;
         return this;
     }
+    
 }

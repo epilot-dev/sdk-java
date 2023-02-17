@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 /**
  * EntitySchema
@@ -17,6 +16,7 @@ public class EntitySchema {
         this.attributes = attributes;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blueprint")
     public String blueprint;
@@ -24,6 +24,7 @@ public class EntitySchema {
         this.blueprint = blueprint;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public EntityCapability[] capabilities;
@@ -31,6 +32,7 @@ public class EntitySchema {
         this.capabilities = capabilities;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialog_config")
     public java.util.Map<String, Object> dialogConfig;
@@ -38,6 +40,7 @@ public class EntitySchema {
         this.dialogConfig = dialogConfig;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("draft")
     public Boolean draft;
@@ -45,6 +48,7 @@ public class EntitySchema {
         this.draft = draft;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable_setting")
     public String[] enableSetting;
@@ -52,6 +56,7 @@ public class EntitySchema {
         this.enableSetting = enableSetting;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explicit_search_mappings")
     public java.util.Map<String, SearchMappings> explicitSearchMappings;
@@ -59,6 +64,7 @@ public class EntitySchema {
         this.explicitSearchMappings = explicitSearchMappings;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feature_flag")
     public String featureFlag;
@@ -66,6 +72,7 @@ public class EntitySchema {
         this.featureFlag = featureFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_settings")
     public EntitySchemaGroupSettings[] groupSettings;
@@ -73,6 +80,7 @@ public class EntitySchema {
         this.groupSettings = groupSettings;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
@@ -80,6 +88,7 @@ public class EntitySchema {
         this.icon = icon;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout_settings")
     public java.util.Map<String, Object> layoutSettings;
@@ -87,18 +96,21 @@ public class EntitySchema {
         this.layoutSettings = layoutSettings;
         return this;
     }
+    
     @JsonProperty("name")
     public String name;
     public EntitySchema withName(String name) {
         this.name = name;
         return this;
     }
+    
     @JsonProperty("plural")
     public String plural;
     public EntitySchema withPlural(String plural) {
         this.plural = plural;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("published")
     public Boolean published;
@@ -106,12 +118,14 @@ public class EntitySchema {
         this.published = published;
         return this;
     }
+    
     @JsonProperty("slug")
     public String slug;
     public EntitySchema withSlug(String slug) {
         this.slug = slug;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title_template")
     public String titleTemplate;
@@ -119,6 +133,7 @@ public class EntitySchema {
         this.titleTemplate = titleTemplate;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ui_config")
     public EntitySchemaUiConfig uiConfig;
@@ -126,6 +141,7 @@ public class EntitySchema {
         this.uiConfig = uiConfig;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
@@ -133,4 +149,5 @@ public class EntitySchema {
         this.version = version;
         return this;
     }
+    
 }

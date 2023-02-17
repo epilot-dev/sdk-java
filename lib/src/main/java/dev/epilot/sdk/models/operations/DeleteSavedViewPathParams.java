@@ -9,4 +9,5 @@ public class DeleteSavedViewPathParams {
         this.id = id;
         return this;
     }
+    
 }

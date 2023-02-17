@@ -12,4 +12,5 @@ public class ReceivedEmailTriggerConfiguration {
         this.messageType = messageType;
         return this;
     }
+    
 }

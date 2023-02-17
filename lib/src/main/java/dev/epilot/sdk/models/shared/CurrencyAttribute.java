@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 /**
  * CurrencyAttribute
@@ -17,6 +16,7 @@ public class CurrencyAttribute {
         this.purpose = purpose;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public java.util.Map<String, Object> constraints;
@@ -24,12 +24,14 @@ public class CurrencyAttribute {
         this.constraints = constraints;
         return this;
     }
+    
     @JsonProperty("currency")
     public Object[] currency;
     public CurrencyAttribute withCurrency(Object[] currency) {
         this.currency = currency;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency_selector_only")
     public Boolean currencySelectorOnly;
@@ -37,6 +39,7 @@ public class CurrencyAttribute {
         this.currencySelectorOnly = currencySelectorOnly;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_value")
     public Object defaultValue;
@@ -44,6 +47,7 @@ public class CurrencyAttribute {
         this.defaultValue = defaultValue;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecated")
     public Boolean deprecated;
@@ -51,6 +55,7 @@ public class CurrencyAttribute {
         this.deprecated = deprecated;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_builder_disable_edit")
     public Boolean entityBuilderDisableEdit;
@@ -58,6 +63,7 @@ public class CurrencyAttribute {
         this.entityBuilderDisableEdit = entityBuilderDisableEdit;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feature_flag")
     public String featureFlag;
@@ -65,6 +71,7 @@ public class CurrencyAttribute {
         this.featureFlag = featureFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public String group;
@@ -72,6 +79,7 @@ public class CurrencyAttribute {
         this.group = group;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden")
     public Boolean hidden;
@@ -79,6 +87,7 @@ public class CurrencyAttribute {
         this.hidden = hidden;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hide_label")
     public Boolean hideLabel;
@@ -86,6 +95,7 @@ public class CurrencyAttribute {
         this.hideLabel = hideLabel;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
@@ -93,12 +103,14 @@ public class CurrencyAttribute {
         this.icon = icon;
         return this;
     }
+    
     @JsonProperty("label")
     public String label;
     public CurrencyAttribute withLabel(String label) {
         this.label = label;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public String layout;
@@ -106,12 +118,14 @@ public class CurrencyAttribute {
         this.layout = layout;
         return this;
     }
+    
     @JsonProperty("name")
     public String name;
     public CurrencyAttribute withName(String name) {
         this.name = name;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Long order;
@@ -119,6 +133,7 @@ public class CurrencyAttribute {
         this.order = order;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeholder")
     public String placeholder;
@@ -126,6 +141,7 @@ public class CurrencyAttribute {
         this.placeholder = placeholder;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preview_value_formatter")
     public String previewValueFormatter;
@@ -133,6 +149,7 @@ public class CurrencyAttribute {
         this.previewValueFormatter = previewValueFormatter;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protected")
     public Boolean protected_;
@@ -140,6 +157,7 @@ public class CurrencyAttribute {
         this.protected_ = protected_;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readonly")
     public Boolean readonly;
@@ -147,6 +165,7 @@ public class CurrencyAttribute {
         this.readonly = readonly;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("render_condition")
     public String renderCondition;
@@ -154,6 +173,7 @@ public class CurrencyAttribute {
         this.renderCondition = renderCondition;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
@@ -161,6 +181,7 @@ public class CurrencyAttribute {
         this.required = required;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setting_flag")
     public String settingFlag;
@@ -168,6 +189,7 @@ public class CurrencyAttribute {
         this.settingFlag = settingFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_in_table")
     public Boolean showInTable;
@@ -175,12 +197,14 @@ public class CurrencyAttribute {
         this.showInTable = showInTable;
         return this;
     }
+    
     @JsonProperty("type")
     public CurrencyAttributeTypeEnum type;
     public CurrencyAttribute withType(CurrencyAttributeTypeEnum type) {
         this.type = type;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value_formatter")
     public String valueFormatter;
@@ -188,4 +212,5 @@ public class CurrencyAttribute {
         this.valueFormatter = valueFormatter;
         return this;
     }
+    
 }

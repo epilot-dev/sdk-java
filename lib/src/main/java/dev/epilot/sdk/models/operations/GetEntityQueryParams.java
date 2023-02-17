@@ -9,4 +9,5 @@ public class GetEntityQueryParams {
         this.hydrate = hydrate;
         return this;
     }
+    
 }

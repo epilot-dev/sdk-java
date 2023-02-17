@@ -8,14 +8,17 @@ public class CreateActivityResponse {
         this.activityItem = activityItem;
         return this;
     }
+    
     public String contentType;
     public CreateActivityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
-    public Long statusCode;
-    public CreateActivityResponse withStatusCode(Long statusCode) {
+    
+    public Integer statusCode;
+    public CreateActivityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
 }

@@ -8,14 +8,17 @@ public class ListTaxonomiesResponse {
         this.contentType = contentType;
         return this;
     }
-    public Long statusCode;
-    public ListTaxonomiesResponse withStatusCode(Long statusCode) {
+    
+    public Integer statusCode;
+    public ListTaxonomiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     public ListTaxonomies200ApplicationJSON listTaxonomies200ApplicationJSONObject;
     public ListTaxonomiesResponse withListTaxonomies200ApplicationJSONObject(ListTaxonomies200ApplicationJSON listTaxonomies200ApplicationJSONObject) {
         this.listTaxonomies200ApplicationJSONObject = listTaxonomies200ApplicationJSONObject;
         return this;
     }
+    
 }

@@ -9,4 +9,5 @@ public class GetSavedViewPathParams {
         this.id = id;
         return this;
     }
+    
 }

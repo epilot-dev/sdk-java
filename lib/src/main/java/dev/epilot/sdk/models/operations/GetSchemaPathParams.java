@@ -9,4 +9,5 @@ public class GetSchemaPathParams {
         this.slug = slug;
         return this;
     }
+    
 }

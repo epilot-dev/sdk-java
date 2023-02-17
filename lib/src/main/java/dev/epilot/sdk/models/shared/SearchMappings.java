@@ -12,6 +12,7 @@ public class SearchMappings {
         this.fields = fields;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Boolean index;
@@ -19,6 +20,7 @@ public class SearchMappings {
         this.index = index;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SearchMappingsTypeEnum type;
@@ -26,4 +28,5 @@ public class SearchMappings {
         this.type = type;
         return this;
     }
+    
 }

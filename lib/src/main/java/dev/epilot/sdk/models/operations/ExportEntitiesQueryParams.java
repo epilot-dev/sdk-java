@@ -9,16 +9,19 @@ public class ExportEntitiesQueryParams {
         this.isTemplate = isTemplate;
         return this;
     }
+    
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=job_id")
     public String jobId;
     public ExportEntitiesQueryParams withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
+    
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public String language;
     public ExportEntitiesQueryParams withLanguage(String language) {
         this.language = language;
         return this;
     }
+    
 }

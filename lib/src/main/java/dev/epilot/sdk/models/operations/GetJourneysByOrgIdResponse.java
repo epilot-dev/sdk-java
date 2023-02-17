@@ -1,6 +1,6 @@
 package dev.epilot.sdk.models.operations;
 
-import java.time.OffsetDateTime;
+
 
 public class GetJourneysByOrgIdResponse {
     public String contentType;
@@ -8,14 +8,17 @@ public class GetJourneysByOrgIdResponse {
         this.contentType = contentType;
         return this;
     }
+    
     public java.util.Map<String, Object> getJourneysResponse;
     public GetJourneysByOrgIdResponse withGetJourneysResponse(java.util.Map<String, Object> getJourneysResponse) {
         this.getJourneysResponse = getJourneysResponse;
         return this;
     }
-    public Long statusCode;
-    public GetJourneysByOrgIdResponse withStatusCode(Long statusCode) {
+    
+    public Integer statusCode;
+    public GetJourneysByOrgIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
 }

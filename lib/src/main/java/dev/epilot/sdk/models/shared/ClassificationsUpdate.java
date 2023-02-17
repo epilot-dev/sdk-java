@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 public class ClassificationsUpdate {
     @JsonInclude(Include.NON_ABSENT)
@@ -13,6 +12,7 @@ public class ClassificationsUpdate {
         this.create = create;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delete")
     public String[] delete;
@@ -20,6 +20,7 @@ public class ClassificationsUpdate {
         this.delete = delete;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update")
     public TaxonomyClassification[] update;
@@ -27,4 +28,5 @@ public class ClassificationsUpdate {
         this.update = update;
         return this;
     }
+    
 }

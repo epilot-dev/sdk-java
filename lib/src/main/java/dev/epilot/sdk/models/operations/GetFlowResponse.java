@@ -8,14 +8,17 @@ public class GetFlowResponse {
         this.automationFlow = automationFlow;
         return this;
     }
+    
     public String contentType;
     public GetFlowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
-    public Long statusCode;
-    public GetFlowResponse withStatusCode(Long statusCode) {
+    
+    public Integer statusCode;
+    public GetFlowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
 }

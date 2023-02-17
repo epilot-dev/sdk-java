@@ -12,6 +12,7 @@ public class EntityDefaultCreateTableMenuOptions {
         this.icon = icon;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
@@ -19,4 +20,5 @@ public class EntityDefaultCreateTableMenuOptions {
         this.label = label;
         return this;
     }
+    
 }

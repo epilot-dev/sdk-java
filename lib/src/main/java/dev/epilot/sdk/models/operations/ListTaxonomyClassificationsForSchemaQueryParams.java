@@ -9,10 +9,12 @@ public class ListTaxonomyClassificationsForSchemaQueryParams {
         this.query = query;
         return this;
     }
+    
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Double size;
     public ListTaxonomyClassificationsForSchemaQueryParams withSize(Double size) {
         this.size = size;
         return this;
     }
+    
 }

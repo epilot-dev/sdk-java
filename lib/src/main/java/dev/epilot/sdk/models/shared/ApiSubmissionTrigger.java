@@ -9,10 +9,12 @@ public class ApiSubmissionTrigger {
         this.configuration = configuration;
         return this;
     }
+    
     @JsonProperty("type")
     public ApiSubmissionTriggerTypeEnum type;
     public ApiSubmissionTrigger withType(ApiSubmissionTriggerTypeEnum type) {
         this.type = type;
         return this;
     }
+    
 }

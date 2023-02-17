@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 /**
  * RepeatableAttribute
@@ -17,6 +16,7 @@ public class RepeatableAttribute {
         this.purpose = purpose;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public java.util.Map<String, Object> constraints;
@@ -24,6 +24,7 @@ public class RepeatableAttribute {
         this.constraints = constraints;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_value")
     public Object defaultValue;
@@ -31,6 +32,7 @@ public class RepeatableAttribute {
         this.defaultValue = defaultValue;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecated")
     public Boolean deprecated;
@@ -38,6 +40,7 @@ public class RepeatableAttribute {
         this.deprecated = deprecated;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable_relation_picker")
     public Boolean enableRelationPicker;
@@ -45,6 +48,7 @@ public class RepeatableAttribute {
         this.enableRelationPicker = enableRelationPicker;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_builder_disable_edit")
     public Boolean entityBuilderDisableEdit;
@@ -52,6 +56,7 @@ public class RepeatableAttribute {
         this.entityBuilderDisableEdit = entityBuilderDisableEdit;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feature_flag")
     public String featureFlag;
@@ -59,6 +64,7 @@ public class RepeatableAttribute {
         this.featureFlag = featureFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public String group;
@@ -66,6 +72,7 @@ public class RepeatableAttribute {
         this.group = group;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_primary")
     public Boolean hasPrimary;
@@ -73,6 +80,7 @@ public class RepeatableAttribute {
         this.hasPrimary = hasPrimary;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden")
     public Boolean hidden;
@@ -80,6 +88,7 @@ public class RepeatableAttribute {
         this.hidden = hidden;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hide_label")
     public Boolean hideLabel;
@@ -87,6 +96,7 @@ public class RepeatableAttribute {
         this.hideLabel = hideLabel;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
@@ -94,12 +104,14 @@ public class RepeatableAttribute {
         this.icon = icon;
         return this;
     }
+    
     @JsonProperty("label")
     public String label;
     public RepeatableAttribute withLabel(String label) {
         this.label = label;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public String layout;
@@ -107,12 +119,14 @@ public class RepeatableAttribute {
         this.layout = layout;
         return this;
     }
+    
     @JsonProperty("name")
     public String name;
     public RepeatableAttribute withName(String name) {
         this.name = name;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Long order;
@@ -120,6 +134,7 @@ public class RepeatableAttribute {
         this.order = order;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeholder")
     public String placeholder;
@@ -127,6 +142,7 @@ public class RepeatableAttribute {
         this.placeholder = placeholder;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preview_value_formatter")
     public String previewValueFormatter;
@@ -134,6 +150,7 @@ public class RepeatableAttribute {
         this.previewValueFormatter = previewValueFormatter;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protected")
     public Boolean protected_;
@@ -141,6 +158,7 @@ public class RepeatableAttribute {
         this.protected_ = protected_;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readonly")
     public Boolean readonly;
@@ -148,6 +166,7 @@ public class RepeatableAttribute {
         this.readonly = readonly;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relation_affinity_mode")
     public RepeatableAttributeRelationAffinityModeEnum relationAffinityMode;
@@ -155,6 +174,7 @@ public class RepeatableAttribute {
         this.relationAffinityMode = relationAffinityMode;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("render_condition")
     public String renderCondition;
@@ -162,6 +182,7 @@ public class RepeatableAttribute {
         this.renderCondition = renderCondition;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeatable")
     public Boolean repeatable;
@@ -169,6 +190,7 @@ public class RepeatableAttribute {
         this.repeatable = repeatable;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
@@ -176,6 +198,7 @@ public class RepeatableAttribute {
         this.required = required;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setting_flag")
     public String settingFlag;
@@ -183,6 +206,7 @@ public class RepeatableAttribute {
         this.settingFlag = settingFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_in_table")
     public Boolean showInTable;
@@ -190,6 +214,7 @@ public class RepeatableAttribute {
         this.showInTable = showInTable;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public RepeatableAttributeTypeEnum type;
@@ -197,6 +222,7 @@ public class RepeatableAttribute {
         this.type = type;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value_formatter")
     public String valueFormatter;
@@ -204,4 +230,5 @@ public class RepeatableAttribute {
         this.valueFormatter = valueFormatter;
         return this;
     }
+    
 }

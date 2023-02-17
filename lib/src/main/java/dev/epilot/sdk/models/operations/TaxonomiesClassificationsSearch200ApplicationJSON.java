@@ -12,4 +12,5 @@ public class TaxonomiesClassificationsSearch200ApplicationJSON {
         this.results = results;
         return this;
     }
+    
 }

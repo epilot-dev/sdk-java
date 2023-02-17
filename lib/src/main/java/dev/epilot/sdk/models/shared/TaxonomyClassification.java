@@ -11,14 +11,15 @@ import java.time.OffsetDateTime;
 
 public class TaxonomyClassification {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonSerialize(contentUsing = DateTimeSerializer.class)
-    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
     public TaxonomyClassification withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
@@ -26,12 +27,14 @@ public class TaxonomyClassification {
         this.id = id;
         return this;
     }
+    
     @JsonProperty("name")
     public String name;
     public TaxonomyClassification withName(String name) {
         this.name = name;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parents")
     public String[] parents;
@@ -39,13 +42,15 @@ public class TaxonomyClassification {
         this.parents = parents;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
-    @JsonSerialize(contentUsing = DateTimeSerializer.class)
-    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
     public TaxonomyClassification withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+    
 }

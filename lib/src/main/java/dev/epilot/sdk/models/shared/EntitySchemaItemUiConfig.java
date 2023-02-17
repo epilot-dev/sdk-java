@@ -12,6 +12,7 @@ public class EntitySchemaItemUiConfig {
         this.createView = createView;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("edit_view")
     public Object editView;
@@ -19,6 +20,7 @@ public class EntitySchemaItemUiConfig {
         this.editView = editView;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_item")
     public EntitySchemaItemUiConfigListItem listItem;
@@ -26,6 +28,7 @@ public class EntitySchemaItemUiConfig {
         this.listItem = listItem;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharing")
     public EntitySchemaItemUiConfigSharing sharing;
@@ -33,6 +36,7 @@ public class EntitySchemaItemUiConfig {
         this.sharing = sharing;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("single_view")
     public Object singleView;
@@ -40,6 +44,7 @@ public class EntitySchemaItemUiConfig {
         this.singleView = singleView;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("table_view")
     public Object tableView;
@@ -47,4 +52,5 @@ public class EntitySchemaItemUiConfig {
         this.tableView = tableView;
         return this;
     }
+    
 }

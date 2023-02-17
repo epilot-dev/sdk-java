@@ -8,4 +8,5 @@ public class AutocompleteRequest {
         this.queryParams = queryParams;
         return this;
     }
+    
 }

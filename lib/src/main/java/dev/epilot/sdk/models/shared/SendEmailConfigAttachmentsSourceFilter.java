@@ -16,6 +16,7 @@ public class SendEmailConfigAttachmentsSourceFilter {
         this.attribute = attribute;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_type")
     public SendEmailConfigAttachmentsSourceFilterDocumentTypeEnum documentType;
@@ -23,6 +24,7 @@ public class SendEmailConfigAttachmentsSourceFilter {
         this.documentType = documentType;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename_regex")
     public String filenameRegex;
@@ -30,6 +32,7 @@ public class SendEmailConfigAttachmentsSourceFilter {
         this.filenameRegex = filenameRegex;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
@@ -37,6 +40,7 @@ public class SendEmailConfigAttachmentsSourceFilter {
         this.limit = limit;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relation_tag")
     public String relationTag;
@@ -44,6 +48,7 @@ public class SendEmailConfigAttachmentsSourceFilter {
         this.relationTag = relationTag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public Boolean self;
@@ -51,6 +56,7 @@ public class SendEmailConfigAttachmentsSourceFilter {
         this.self = self;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
@@ -58,4 +64,5 @@ public class SendEmailConfigAttachmentsSourceFilter {
         this.tag = tag;
         return this;
     }
+    
 }

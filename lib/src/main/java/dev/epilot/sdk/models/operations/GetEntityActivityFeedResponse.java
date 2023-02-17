@@ -8,14 +8,17 @@ public class GetEntityActivityFeedResponse {
         this.contentType = contentType;
         return this;
     }
-    public Long statusCode;
-    public GetEntityActivityFeedResponse withStatusCode(Long statusCode) {
+    
+    public Integer statusCode;
+    public GetEntityActivityFeedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     public GetEntityActivityFeed200ApplicationJSON getEntityActivityFeed200ApplicationJSONObject;
     public GetEntityActivityFeedResponse withGetEntityActivityFeed200ApplicationJSONObject(GetEntityActivityFeed200ApplicationJSON getEntityActivityFeed200ApplicationJSONObject) {
         this.getEntityActivityFeed200ApplicationJSONObject = getEntityActivityFeed200ApplicationJSONObject;
         return this;
     }
+    
 }

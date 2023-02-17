@@ -12,6 +12,7 @@ public class EntitySchemaItemGroupSettingsInfoTooltipTitle {
         this.default_ = default_;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
@@ -19,4 +20,5 @@ public class EntitySchemaItemGroupSettingsInfoTooltipTitle {
         this.key = key;
         return this;
     }
+    
 }

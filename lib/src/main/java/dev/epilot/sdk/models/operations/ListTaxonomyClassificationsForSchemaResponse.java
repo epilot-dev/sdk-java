@@ -8,14 +8,17 @@ public class ListTaxonomyClassificationsForSchemaResponse {
         this.contentType = contentType;
         return this;
     }
-    public Long statusCode;
-    public ListTaxonomyClassificationsForSchemaResponse withStatusCode(Long statusCode) {
+    
+    public Integer statusCode;
+    public ListTaxonomyClassificationsForSchemaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     public ListTaxonomyClassificationsForSchema200ApplicationJSON listTaxonomyClassificationsForSchema200ApplicationJSONObject;
     public ListTaxonomyClassificationsForSchemaResponse withListTaxonomyClassificationsForSchema200ApplicationJSONObject(ListTaxonomyClassificationsForSchema200ApplicationJSON listTaxonomyClassificationsForSchema200ApplicationJSONObject) {
         this.listTaxonomyClassificationsForSchema200ApplicationJSONObject = listTaxonomyClassificationsForSchema200ApplicationJSONObject;
         return this;
     }
+    
 }

@@ -9,10 +9,12 @@ public class TaxonomyAutocompleteQueryParams {
         this.query = query;
         return this;
     }
+    
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Double size;
     public TaxonomyAutocompleteQueryParams withSize(Double size) {
         this.size = size;
         return this;
     }
+    
 }

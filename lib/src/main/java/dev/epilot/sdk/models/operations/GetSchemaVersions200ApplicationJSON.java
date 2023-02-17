@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.operations;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 public class GetSchemaVersions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
@@ -13,6 +12,7 @@ public class GetSchemaVersions200ApplicationJSON {
         this.drafts = drafts;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versions")
     public dev.epilot.sdk.models.shared.EntitySchemaItem[] versions;
@@ -20,4 +20,5 @@ public class GetSchemaVersions200ApplicationJSON {
         this.versions = versions;
         return this;
     }
+    
 }

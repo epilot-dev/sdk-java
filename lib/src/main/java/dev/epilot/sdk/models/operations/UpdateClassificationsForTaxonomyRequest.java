@@ -8,10 +8,12 @@ public class UpdateClassificationsForTaxonomyRequest {
         this.pathParams = pathParams;
         return this;
     }
+    
     @SpeakeasyMetadata("request:mediaType=application/json")
     public dev.epilot.sdk.models.shared.ClassificationsUpdate request;
     public UpdateClassificationsForTaxonomyRequest withRequest(dev.epilot.sdk.models.shared.ClassificationsUpdate request) {
         this.request = request;
         return this;
     }
+    
 }

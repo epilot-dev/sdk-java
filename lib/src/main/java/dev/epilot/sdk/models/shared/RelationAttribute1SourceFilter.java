@@ -16,6 +16,7 @@ public class RelationAttribute1SourceFilter {
         this.attribute = attribute;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
@@ -23,6 +24,7 @@ public class RelationAttribute1SourceFilter {
         this.limit = limit;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relation_tag")
     public String relationTag;
@@ -30,6 +32,7 @@ public class RelationAttribute1SourceFilter {
         this.relationTag = relationTag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
@@ -37,6 +40,7 @@ public class RelationAttribute1SourceFilter {
         this.schema = schema;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public Boolean self;
@@ -44,6 +48,7 @@ public class RelationAttribute1SourceFilter {
         this.self = self;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
@@ -51,4 +56,5 @@ public class RelationAttribute1SourceFilter {
         this.tag = tag;
         return this;
     }
+    
 }

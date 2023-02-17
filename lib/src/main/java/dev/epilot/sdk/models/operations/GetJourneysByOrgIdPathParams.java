@@ -9,4 +9,5 @@ public class GetJourneysByOrgIdPathParams {
         this.id = id;
         return this;
     }
+    
 }

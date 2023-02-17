@@ -8,14 +8,17 @@ public class DeleteFlowResponse {
         this.automationFlow = automationFlow;
         return this;
     }
+    
     public String contentType;
     public DeleteFlowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
-    public Long statusCode;
-    public DeleteFlowResponse withStatusCode(Long statusCode) {
+    
+    public Integer statusCode;
+    public DeleteFlowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
 }

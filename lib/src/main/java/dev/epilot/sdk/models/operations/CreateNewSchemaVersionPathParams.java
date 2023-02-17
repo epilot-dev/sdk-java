@@ -9,4 +9,5 @@ public class CreateNewSchemaVersionPathParams {
         this.slug = slug;
         return this;
     }
+    
 }

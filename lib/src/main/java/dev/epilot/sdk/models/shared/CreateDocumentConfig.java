@@ -12,6 +12,7 @@ public class CreateDocumentConfig {
         this.filename = filename;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template_id")
     public String templateId;
@@ -19,4 +20,5 @@ public class CreateDocumentConfig {
         this.templateId = templateId;
         return this;
     }
+    
 }

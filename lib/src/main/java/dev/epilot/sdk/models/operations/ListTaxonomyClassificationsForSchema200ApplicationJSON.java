@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.operations;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 public class ListTaxonomyClassificationsForSchema200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
@@ -13,4 +12,5 @@ public class ListTaxonomyClassificationsForSchema200ApplicationJSON {
         this.results = results;
         return this;
     }
+    
 }

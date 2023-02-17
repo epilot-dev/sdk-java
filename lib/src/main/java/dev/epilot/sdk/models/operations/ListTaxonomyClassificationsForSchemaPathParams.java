@@ -9,10 +9,12 @@ public class ListTaxonomyClassificationsForSchemaPathParams {
         this.slug = slug;
         return this;
     }
+    
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxonomySlug")
     public String taxonomySlug;
     public ListTaxonomyClassificationsForSchemaPathParams withTaxonomySlug(String taxonomySlug) {
         this.taxonomySlug = taxonomySlug;
         return this;
     }
+    
 }

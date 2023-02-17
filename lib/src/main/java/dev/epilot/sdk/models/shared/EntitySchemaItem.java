@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 /**
  * EntitySchemaItem
@@ -17,6 +16,7 @@ public class EntitySchemaItem {
         this.attributes = attributes;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blueprint")
     public String blueprint;
@@ -24,6 +24,7 @@ public class EntitySchemaItem {
         this.blueprint = blueprint;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public EntityCapability[] capabilities;
@@ -31,6 +32,7 @@ public class EntitySchemaItem {
         this.capabilities = capabilities;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
@@ -38,6 +40,7 @@ public class EntitySchemaItem {
         this.comment = comment;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
@@ -45,6 +48,7 @@ public class EntitySchemaItem {
         this.createdAt = createdAt;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialog_config")
     public java.util.Map<String, Object> dialogConfig;
@@ -52,6 +56,7 @@ public class EntitySchemaItem {
         this.dialogConfig = dialogConfig;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("draft")
     public Boolean draft;
@@ -59,6 +64,7 @@ public class EntitySchemaItem {
         this.draft = draft;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable_setting")
     public String[] enableSetting;
@@ -66,6 +72,7 @@ public class EntitySchemaItem {
         this.enableSetting = enableSetting;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explicit_search_mappings")
     public java.util.Map<String, SearchMappings> explicitSearchMappings;
@@ -73,6 +80,7 @@ public class EntitySchemaItem {
         this.explicitSearchMappings = explicitSearchMappings;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feature_flag")
     public String featureFlag;
@@ -80,6 +88,7 @@ public class EntitySchemaItem {
         this.featureFlag = featureFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_settings")
     public EntitySchemaItemGroupSettings[] groupSettings;
@@ -87,6 +96,7 @@ public class EntitySchemaItem {
         this.groupSettings = groupSettings;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
@@ -94,6 +104,7 @@ public class EntitySchemaItem {
         this.icon = icon;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
@@ -101,6 +112,7 @@ public class EntitySchemaItem {
         this.id = id;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout_settings")
     public java.util.Map<String, Object> layoutSettings;
@@ -108,18 +120,21 @@ public class EntitySchemaItem {
         this.layoutSettings = layoutSettings;
         return this;
     }
+    
     @JsonProperty("name")
     public String name;
     public EntitySchemaItem withName(String name) {
         this.name = name;
         return this;
     }
+    
     @JsonProperty("plural")
     public String plural;
     public EntitySchemaItem withPlural(String plural) {
         this.plural = plural;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("published")
     public Boolean published;
@@ -127,12 +142,14 @@ public class EntitySchemaItem {
         this.published = published;
         return this;
     }
+    
     @JsonProperty("slug")
     public String slug;
     public EntitySchemaItem withSlug(String slug) {
         this.slug = slug;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public EntitySchemaItemSource source;
@@ -140,6 +157,7 @@ public class EntitySchemaItem {
         this.source = source;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title_template")
     public String titleTemplate;
@@ -147,6 +165,7 @@ public class EntitySchemaItem {
         this.titleTemplate = titleTemplate;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ui_config")
     public EntitySchemaItemUiConfig uiConfig;
@@ -154,6 +173,7 @@ public class EntitySchemaItem {
         this.uiConfig = uiConfig;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
@@ -161,6 +181,7 @@ public class EntitySchemaItem {
         this.updatedAt = updatedAt;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
@@ -168,4 +189,5 @@ public class EntitySchemaItem {
         this.version = version;
         return this;
     }
+    
 }

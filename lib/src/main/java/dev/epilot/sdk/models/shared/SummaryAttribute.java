@@ -27,12 +27,14 @@ public class SummaryAttribute {
         this.featureFlag = featureFlag;
         return this;
     }
+    
     @JsonProperty("label")
     public String label;
     public SummaryAttribute withLabel(String label) {
         this.label = label;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("render_condition")
     public String renderCondition;
@@ -40,6 +42,7 @@ public class SummaryAttribute {
         this.renderCondition = renderCondition;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setting_flag")
     public String settingFlag;
@@ -47,6 +50,7 @@ public class SummaryAttribute {
         this.settingFlag = settingFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_as_tag")
     public Boolean showAsTag;
@@ -54,6 +58,7 @@ public class SummaryAttribute {
         this.showAsTag = showAsTag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag_color")
     public String tagColor;
@@ -61,10 +66,12 @@ public class SummaryAttribute {
         this.tagColor = tagColor;
         return this;
     }
+    
     @JsonProperty("value")
     public String value;
     public SummaryAttribute withValue(String value) {
         this.value = value;
         return this;
     }
+    
 }

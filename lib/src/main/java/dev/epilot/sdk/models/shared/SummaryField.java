@@ -16,6 +16,7 @@ public class SummaryField {
         this.displayAs = displayAs;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
@@ -23,4 +24,5 @@ public class SummaryField {
         this.field = field;
         return this;
     }
+    
 }

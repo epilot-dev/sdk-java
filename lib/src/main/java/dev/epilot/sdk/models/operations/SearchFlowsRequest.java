@@ -8,4 +8,5 @@ public class SearchFlowsRequest {
         this.queryParams = queryParams;
         return this;
     }
+    
 }

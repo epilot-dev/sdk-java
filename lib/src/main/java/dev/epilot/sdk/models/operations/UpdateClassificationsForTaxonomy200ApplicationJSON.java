@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.operations;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 public class UpdateClassificationsForTaxonomy200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
@@ -13,6 +12,7 @@ public class UpdateClassificationsForTaxonomy200ApplicationJSON {
         this.created = created;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public java.util.Map<String, Object> deleted;
@@ -20,6 +20,7 @@ public class UpdateClassificationsForTaxonomy200ApplicationJSON {
         this.deleted = deleted;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated")
     public dev.epilot.sdk.models.shared.TaxonomyClassification[] updated;
@@ -27,4 +28,5 @@ public class UpdateClassificationsForTaxonomy200ApplicationJSON {
         this.updated = updated;
         return this;
     }
+    
 }

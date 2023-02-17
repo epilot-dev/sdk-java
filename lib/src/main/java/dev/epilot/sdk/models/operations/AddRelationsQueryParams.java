@@ -9,4 +9,5 @@ public class AddRelationsQueryParams {
         this.async = async;
         return this;
     }
+    
 }

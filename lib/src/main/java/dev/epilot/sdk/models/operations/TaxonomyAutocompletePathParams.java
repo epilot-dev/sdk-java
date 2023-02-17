@@ -9,4 +9,5 @@ public class TaxonomyAutocompletePathParams {
         this.taxonomySlug = taxonomySlug;
         return this;
     }
+    
 }

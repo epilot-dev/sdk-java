@@ -12,4 +12,5 @@ public class FrontendSubmitTriggerConfiguration {
         this.sourceId = sourceId;
         return this;
     }
+    
 }

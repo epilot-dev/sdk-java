@@ -9,4 +9,5 @@ public class RemoveJourneyPathParams {
         this.id = id;
         return this;
     }
+    
 }

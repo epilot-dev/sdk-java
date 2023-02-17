@@ -9,4 +9,5 @@ public class DeleteSchemaByIdQueryParams {
         this.id = id;
         return this;
     }
+    
 }

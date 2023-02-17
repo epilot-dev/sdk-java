@@ -8,14 +8,17 @@ public class SearchFlowsResponse {
         this.contentType = contentType;
         return this;
     }
+    
     public dev.epilot.sdk.models.shared.SearchAutomationsResp searchAutomationsResp;
     public SearchFlowsResponse withSearchAutomationsResp(dev.epilot.sdk.models.shared.SearchAutomationsResp searchAutomationsResp) {
         this.searchAutomationsResp = searchAutomationsResp;
         return this;
     }
-    public Long statusCode;
-    public SearchFlowsResponse withStatusCode(Long statusCode) {
+    
+    public Integer statusCode;
+    public SearchFlowsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
 }

@@ -9,4 +9,5 @@ public class CreateEntityPathParams {
         this.slug = slug;
         return this;
     }
+    
 }

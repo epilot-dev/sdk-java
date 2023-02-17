@@ -8,9 +8,11 @@ public class DeleteEntityRequest {
         this.pathParams = pathParams;
         return this;
     }
+    
     public DeleteEntityQueryParams queryParams;
     public DeleteEntityRequest withQueryParams(DeleteEntityQueryParams queryParams) {
         this.queryParams = queryParams;
         return this;
     }
+    
 }

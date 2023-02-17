@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 /**
  * ConsentAttribute
@@ -17,6 +16,7 @@ public class ConsentAttribute {
         this.purpose = purpose;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public java.util.Map<String, Object> constraints;
@@ -24,6 +24,7 @@ public class ConsentAttribute {
         this.constraints = constraints;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_value")
     public Object defaultValue;
@@ -31,6 +32,7 @@ public class ConsentAttribute {
         this.defaultValue = defaultValue;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecated")
     public Boolean deprecated;
@@ -38,6 +40,7 @@ public class ConsentAttribute {
         this.deprecated = deprecated;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_builder_disable_edit")
     public Boolean entityBuilderDisableEdit;
@@ -45,6 +48,7 @@ public class ConsentAttribute {
         this.entityBuilderDisableEdit = entityBuilderDisableEdit;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feature_flag")
     public String featureFlag;
@@ -52,6 +56,7 @@ public class ConsentAttribute {
         this.featureFlag = featureFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public String group;
@@ -59,6 +64,7 @@ public class ConsentAttribute {
         this.group = group;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden")
     public Boolean hidden;
@@ -66,6 +72,7 @@ public class ConsentAttribute {
         this.hidden = hidden;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hide_label")
     public Boolean hideLabel;
@@ -73,6 +80,7 @@ public class ConsentAttribute {
         this.hideLabel = hideLabel;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
@@ -80,6 +88,7 @@ public class ConsentAttribute {
         this.icon = icon;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifiers")
     public String[] identifiers;
@@ -87,12 +96,14 @@ public class ConsentAttribute {
         this.identifiers = identifiers;
         return this;
     }
+    
     @JsonProperty("label")
     public String label;
     public ConsentAttribute withLabel(String label) {
         this.label = label;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public String layout;
@@ -100,12 +111,14 @@ public class ConsentAttribute {
         this.layout = layout;
         return this;
     }
+    
     @JsonProperty("name")
     public String name;
     public ConsentAttribute withName(String name) {
         this.name = name;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Long order;
@@ -113,6 +126,7 @@ public class ConsentAttribute {
         this.order = order;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeholder")
     public String placeholder;
@@ -120,6 +134,7 @@ public class ConsentAttribute {
         this.placeholder = placeholder;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preview_value_formatter")
     public String previewValueFormatter;
@@ -127,6 +142,7 @@ public class ConsentAttribute {
         this.previewValueFormatter = previewValueFormatter;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protected")
     public Boolean protected_;
@@ -134,6 +150,7 @@ public class ConsentAttribute {
         this.protected_ = protected_;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readonly")
     public Boolean readonly;
@@ -141,6 +158,7 @@ public class ConsentAttribute {
         this.readonly = readonly;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("render_condition")
     public String renderCondition;
@@ -148,6 +166,7 @@ public class ConsentAttribute {
         this.renderCondition = renderCondition;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
@@ -155,6 +174,7 @@ public class ConsentAttribute {
         this.required = required;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setting_flag")
     public String settingFlag;
@@ -162,6 +182,7 @@ public class ConsentAttribute {
         this.settingFlag = settingFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_in_table")
     public Boolean showInTable;
@@ -169,18 +190,21 @@ public class ConsentAttribute {
         this.showInTable = showInTable;
         return this;
     }
+    
     @JsonProperty("topic")
     public String topic;
     public ConsentAttribute withTopic(String topic) {
         this.topic = topic;
         return this;
     }
+    
     @JsonProperty("type")
     public ConsentAttributeTypeEnum type;
     public ConsentAttribute withType(ConsentAttributeTypeEnum type) {
         this.type = type;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value_formatter")
     public String valueFormatter;
@@ -188,4 +212,5 @@ public class ConsentAttribute {
         this.valueFormatter = valueFormatter;
         return this;
     }
+    
 }

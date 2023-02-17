@@ -9,4 +9,5 @@ public class ListSchemasQueryParams {
         this.unpublished = unpublished;
         return this;
     }
+    
 }

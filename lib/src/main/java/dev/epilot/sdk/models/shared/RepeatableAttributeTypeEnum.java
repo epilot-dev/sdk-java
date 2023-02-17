@@ -1,6 +1,6 @@
 package dev.epilot.sdk.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonValue;
 public enum RepeatableAttributeTypeEnum {
     STRING("string"),
     PHONE("phone"),
@@ -11,6 +11,7 @@ public enum RepeatableAttributeTypeEnum {
     PRICE_COMPONENT("price_component"),
     DATE("date");
 
+    @JsonValue
     public final String value;
 
     private RepeatableAttributeTypeEnum(String value) {

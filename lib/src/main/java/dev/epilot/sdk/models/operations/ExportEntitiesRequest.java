@@ -8,10 +8,12 @@ public class ExportEntitiesRequest {
         this.queryParams = queryParams;
         return this;
     }
+    
     @SpeakeasyMetadata("request:mediaType=application/json")
     public dev.epilot.sdk.models.shared.EntitySearchParams request;
     public ExportEntitiesRequest withRequest(dev.epilot.sdk.models.shared.EntitySearchParams request) {
         this.request = request;
         return this;
     }
+    
 }

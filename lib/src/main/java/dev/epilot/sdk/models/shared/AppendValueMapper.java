@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 public class AppendValueMapper {
     @JsonProperty("mode")
@@ -12,6 +11,7 @@ public class AppendValueMapper {
         this.mode = mode;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
@@ -19,12 +19,14 @@ public class AppendValueMapper {
         this.source = source;
         return this;
     }
+    
     @JsonProperty("target")
     public String target;
     public AppendValueMapper withTarget(String target) {
         this.target = target;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_unique")
     public String[] targetUnique;
@@ -32,10 +34,12 @@ public class AppendValueMapper {
         this.targetUnique = targetUnique;
         return this;
     }
+    
     @JsonProperty("value_json")
     public String valueJson;
     public AppendValueMapper withValueJson(String valueJson) {
         this.valueJson = valueJson;
         return this;
     }
+    
 }

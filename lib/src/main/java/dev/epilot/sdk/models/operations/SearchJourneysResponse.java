@@ -8,14 +8,17 @@ public class SearchJourneysResponse {
         this.contentType = contentType;
         return this;
     }
+    
     public dev.epilot.sdk.models.shared.SearchJourneysResponse searchJourneysResponse;
     public SearchJourneysResponse withSearchJourneysResponse(dev.epilot.sdk.models.shared.SearchJourneysResponse searchJourneysResponse) {
         this.searchJourneysResponse = searchJourneysResponse;
         return this;
     }
-    public Long statusCode;
-    public SearchJourneysResponse withStatusCode(Long statusCode) {
+    
+    public Integer statusCode;
+    public SearchJourneysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
 }

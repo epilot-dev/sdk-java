@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 /**
  * CartCheckoutAction
@@ -17,6 +16,7 @@ public class CartCheckoutAction {
         this.allowFailure = allowFailure;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public CartCheckoutConfig config;
@@ -24,6 +24,7 @@ public class CartCheckoutAction {
         this.config = config;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_automatically")
     public Boolean createdAutomatically;
@@ -31,6 +32,7 @@ public class CartCheckoutAction {
         this.createdAutomatically = createdAutomatically;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_output")
     public ErrorOutput errorOutput;
@@ -38,6 +40,7 @@ public class CartCheckoutAction {
         this.errorOutput = errorOutput;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("execution_status")
     public ExecutionStatusEnum executionStatus;
@@ -45,6 +48,7 @@ public class CartCheckoutAction {
         this.executionStatus = executionStatus;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flow_action_id")
     public String flowActionId;
@@ -52,6 +56,7 @@ public class CartCheckoutAction {
         this.flowActionId = flowActionId;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
@@ -59,6 +64,7 @@ public class CartCheckoutAction {
         this.id = id;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
@@ -66,6 +72,7 @@ public class CartCheckoutAction {
         this.name = name;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputs")
     public java.util.Map<String, Object> outputs;
@@ -73,6 +80,7 @@ public class CartCheckoutAction {
         this.outputs = outputs;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retry_strategy")
     public RetryStrategyEnum retryStrategy;
@@ -80,6 +88,7 @@ public class CartCheckoutAction {
         this.retryStrategy = retryStrategy;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("started_at")
     public String startedAt;
@@ -87,6 +96,7 @@ public class CartCheckoutAction {
         this.startedAt = startedAt;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public Object type;
@@ -94,6 +104,7 @@ public class CartCheckoutAction {
         this.type = type;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
@@ -101,4 +112,5 @@ public class CartCheckoutAction {
         this.updatedAt = updatedAt;
         return this;
     }
+    
 }

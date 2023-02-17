@@ -9,4 +9,5 @@ public class SearchJourneysRequest {
         this.request = request;
         return this;
     }
+    
 }

@@ -9,16 +9,19 @@ public class GetExecutionsQueryParams {
         this.entityId = entityId;
         return this;
     }
+    
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
     public Long from;
     public GetExecutionsQueryParams withFrom(Long from) {
         this.from = from;
         return this;
     }
+    
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Long size;
     public GetExecutionsQueryParams withSize(Long size) {
         this.size = size;
         return this;
     }
+    
 }

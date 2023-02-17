@@ -8,14 +8,17 @@ public class TaxonomyAutocompleteResponse {
         this.contentType = contentType;
         return this;
     }
-    public Long statusCode;
-    public TaxonomyAutocompleteResponse withStatusCode(Long statusCode) {
+    
+    public Integer statusCode;
+    public TaxonomyAutocompleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     public TaxonomyAutocomplete200ApplicationJSON taxonomyAutocomplete200ApplicationJSONObject;
     public TaxonomyAutocompleteResponse withTaxonomyAutocomplete200ApplicationJSONObject(TaxonomyAutocomplete200ApplicationJSON taxonomyAutocomplete200ApplicationJSONObject) {
         this.taxonomyAutocomplete200ApplicationJSONObject = taxonomyAutocomplete200ApplicationJSONObject;
         return this;
     }
+    
 }

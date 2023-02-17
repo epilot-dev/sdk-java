@@ -8,14 +8,17 @@ public class GetExecutionsResponse {
         this.contentType = contentType;
         return this;
     }
+    
     public dev.epilot.sdk.models.shared.GetExecutionsResp getExecutionsResp;
     public GetExecutionsResponse withGetExecutionsResp(dev.epilot.sdk.models.shared.GetExecutionsResp getExecutionsResp) {
         this.getExecutionsResp = getExecutionsResp;
         return this;
     }
-    public Long statusCode;
-    public GetExecutionsResponse withStatusCode(Long statusCode) {
+    
+    public Integer statusCode;
+    public GetExecutionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
 }

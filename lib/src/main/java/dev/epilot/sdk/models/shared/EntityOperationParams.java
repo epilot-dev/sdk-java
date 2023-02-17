@@ -12,6 +12,7 @@ public class EntityOperationParams {
         this.id = id;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
@@ -19,4 +20,5 @@ public class EntityOperationParams {
         this.slug = slug;
         return this;
     }
+    
 }

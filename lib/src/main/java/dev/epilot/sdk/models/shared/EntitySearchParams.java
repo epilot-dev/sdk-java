@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 public class EntitySearchParams {
     @JsonInclude(Include.NON_ABSENT)
@@ -13,6 +12,7 @@ public class EntitySearchParams {
         this.fields = fields;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public Long from;
@@ -20,6 +20,7 @@ public class EntitySearchParams {
         this.from = from;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hydrate")
     public Boolean hydrate;
@@ -27,6 +28,7 @@ public class EntitySearchParams {
         this.hydrate = hydrate;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("include_scores")
     public Boolean includeScores;
@@ -34,12 +36,14 @@ public class EntitySearchParams {
         this.includeScores = includeScores;
         return this;
     }
+    
     @JsonProperty("q")
     public String q;
     public EntitySearchParams withQ(String q) {
         this.q = q;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
@@ -47,6 +51,7 @@ public class EntitySearchParams {
         this.size = size;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
     public String sort;
@@ -54,4 +59,5 @@ public class EntitySearchParams {
         this.sort = sort;
         return this;
     }
+    
 }

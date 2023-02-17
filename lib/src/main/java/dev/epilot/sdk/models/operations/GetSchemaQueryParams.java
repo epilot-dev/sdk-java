@@ -9,4 +9,5 @@ public class GetSchemaQueryParams {
         this.id = id;
         return this;
     }
+    
 }

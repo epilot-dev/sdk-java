@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 public class MapEntityConfig {
     @JsonInclude(Include.NON_ABSENT)
@@ -13,6 +12,7 @@ public class MapEntityConfig {
         this.linkbackRelationAttribute = linkbackRelationAttribute;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkback_relation_tags")
     public String[] linkbackRelationTags;
@@ -20,6 +20,7 @@ public class MapEntityConfig {
         this.linkbackRelationTags = linkbackRelationTags;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mapping_attributes")
     public Object[] mappingAttributes;
@@ -27,6 +28,7 @@ public class MapEntityConfig {
         this.mappingAttributes = mappingAttributes;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mapping_config")
     public MappingConfigRef mappingConfig;
@@ -34,6 +36,7 @@ public class MapEntityConfig {
         this.mappingConfig = mappingConfig;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relation_attributes")
     public RelationAttribute1[] relationAttributes;
@@ -41,12 +44,14 @@ public class MapEntityConfig {
         this.relationAttributes = relationAttributes;
         return this;
     }
+    
     @JsonProperty("target_schema")
     public String targetSchema;
     public MapEntityConfig withTargetSchema(String targetSchema) {
         this.targetSchema = targetSchema;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_unique")
     public String[] targetUnique;
@@ -54,4 +59,5 @@ public class MapEntityConfig {
         this.targetUnique = targetUnique;
         return this;
     }
+    
 }

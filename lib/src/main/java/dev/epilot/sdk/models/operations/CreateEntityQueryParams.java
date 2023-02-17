@@ -9,10 +9,12 @@ public class CreateEntityQueryParams {
         this.activityId = activityId;
         return this;
     }
+    
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=async")
     public Boolean async;
     public CreateEntityQueryParams withAsync(Boolean async) {
         this.async = async;
         return this;
     }
+    
 }

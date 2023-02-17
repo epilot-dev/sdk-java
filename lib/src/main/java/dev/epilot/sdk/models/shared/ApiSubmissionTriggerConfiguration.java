@@ -12,4 +12,5 @@ public class ApiSubmissionTriggerConfiguration {
         this.sourceId = sourceId;
         return this;
     }
+    
 }

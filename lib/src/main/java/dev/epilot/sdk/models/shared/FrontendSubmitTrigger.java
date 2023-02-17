@@ -9,10 +9,12 @@ public class FrontendSubmitTrigger {
         this.configuration = configuration;
         return this;
     }
+    
     @JsonProperty("type")
     public FrontendSubmitTriggerTypeEnum type;
     public FrontendSubmitTrigger withType(FrontendSubmitTriggerTypeEnum type) {
         this.type = type;
         return this;
     }
+    
 }

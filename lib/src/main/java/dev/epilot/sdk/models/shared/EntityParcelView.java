@@ -12,6 +12,7 @@ public class EntityParcelView {
         this.import_ = import_;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("view_type")
     public EntityParcelViewViewTypeEnum viewType;
@@ -19,4 +20,5 @@ public class EntityParcelView {
         this.viewType = viewType;
         return this;
     }
+    
 }

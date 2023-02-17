@@ -12,6 +12,7 @@ public class EntityDefaultTableDropdownItems {
         this.featureFlag = featureFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legacy")
     public Boolean legacy;
@@ -19,4 +20,5 @@ public class EntityDefaultTableDropdownItems {
         this.legacy = legacy;
         return this;
     }
+    
 }

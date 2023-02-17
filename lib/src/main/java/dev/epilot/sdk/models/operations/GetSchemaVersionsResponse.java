@@ -8,14 +8,17 @@ public class GetSchemaVersionsResponse {
         this.contentType = contentType;
         return this;
     }
-    public Long statusCode;
-    public GetSchemaVersionsResponse withStatusCode(Long statusCode) {
+    
+    public Integer statusCode;
+    public GetSchemaVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     public GetSchemaVersions200ApplicationJSON getSchemaVersions200ApplicationJSONObject;
     public GetSchemaVersionsResponse withGetSchemaVersions200ApplicationJSONObject(GetSchemaVersions200ApplicationJSON getSchemaVersions200ApplicationJSONObject) {
         this.getSchemaVersions200ApplicationJSONObject = getSchemaVersions200ApplicationJSONObject;
         return this;
     }
+    
 }

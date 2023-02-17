@@ -8,10 +8,12 @@ public class UpdateSavedViewRequest {
         this.pathParams = pathParams;
         return this;
     }
+    
     @SpeakeasyMetadata("request:mediaType=application/json")
     public dev.epilot.sdk.models.shared.SavedView request;
     public UpdateSavedViewRequest withRequest(dev.epilot.sdk.models.shared.SavedView request) {
         this.request = request;
         return this;
     }
+    
 }

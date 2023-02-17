@@ -8,9 +8,11 @@ public class RemoveJourneyResponse {
         this.contentType = contentType;
         return this;
     }
-    public Long statusCode;
-    public RemoveJourneyResponse withStatusCode(Long statusCode) {
+    
+    public Integer statusCode;
+    public RemoveJourneyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
 }

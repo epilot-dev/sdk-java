@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 public class EntityOperationDiff {
     @JsonInclude(Include.NON_ABSENT)
@@ -13,6 +12,7 @@ public class EntityOperationDiff {
         this.added = added;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public java.util.Map<String, Object> deleted;
@@ -20,6 +20,7 @@ public class EntityOperationDiff {
         this.deleted = deleted;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated")
     public java.util.Map<String, Object> updated;
@@ -27,4 +28,5 @@ public class EntityOperationDiff {
         this.updated = updated;
         return this;
     }
+    
 }

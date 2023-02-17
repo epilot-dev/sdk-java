@@ -9,10 +9,12 @@ public class ErrorOutput {
         this.errorCode = errorCode;
         return this;
     }
+    
     @JsonProperty("error_reason")
     public String errorReason;
     public ErrorOutput withErrorReason(String errorReason) {
         this.errorReason = errorReason;
         return this;
     }
+    
 }

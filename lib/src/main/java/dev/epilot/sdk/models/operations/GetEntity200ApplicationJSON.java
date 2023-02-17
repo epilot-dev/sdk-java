@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.operations;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 public class GetEntity200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
@@ -13,6 +12,7 @@ public class GetEntity200ApplicationJSON {
         this.entity = entity;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relations")
     public java.util.Map<String, Object>[] relations;
@@ -20,4 +20,5 @@ public class GetEntity200ApplicationJSON {
         this.relations = relations;
         return this;
     }
+    
 }

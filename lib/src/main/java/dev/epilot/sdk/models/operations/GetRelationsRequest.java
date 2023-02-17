@@ -8,9 +8,11 @@ public class GetRelationsRequest {
         this.pathParams = pathParams;
         return this;
     }
+    
     public GetRelationsQueryParams queryParams;
     public GetRelationsRequest withQueryParams(GetRelationsQueryParams queryParams) {
         this.queryParams = queryParams;
         return this;
     }
+    
 }

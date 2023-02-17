@@ -9,10 +9,12 @@ public class RetriggerActionPathParams {
         this.actionId = actionId;
         return this;
     }
+    
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=execution_id")
     public String executionId;
     public RetriggerActionPathParams withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
     }
+    
 }

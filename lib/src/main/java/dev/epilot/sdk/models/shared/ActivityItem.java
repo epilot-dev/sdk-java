@@ -17,6 +17,7 @@ public class ActivityItem {
         this.id = id;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caller")
     public java.util.Map<String, Object> caller;
@@ -24,12 +25,14 @@ public class ActivityItem {
         this.caller = caller;
         return this;
     }
+    
     @JsonProperty("message")
     public String message;
     public ActivityItem withMessage(String message) {
         this.message = message;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public EntityOperation[] operations;
@@ -37,6 +40,7 @@ public class ActivityItem {
         this.operations = operations;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations_total")
     public Long operationsTotal;
@@ -44,6 +48,7 @@ public class ActivityItem {
         this.operationsTotal = operationsTotal;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public java.util.Map<String, Object> payload;
@@ -51,25 +56,29 @@ public class ActivityItem {
         this.payload = payload;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
-    @JsonSerialize(contentUsing = DateTimeSerializer.class)
-    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
     public ActivityItem withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
+    
     @JsonProperty("title")
     public String title;
     public ActivityItem withTitle(String title) {
         this.title = title;
         return this;
     }
+    
     @JsonProperty("type")
     public String type;
     public ActivityItem withType(String type) {
         this.type = type;
         return this;
     }
+    
 }

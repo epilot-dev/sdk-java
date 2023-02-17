@@ -8,9 +8,11 @@ public class GetEntityActivityFeedRequest {
         this.pathParams = pathParams;
         return this;
     }
+    
     public GetEntityActivityFeedQueryParams queryParams;
     public GetEntityActivityFeedRequest withQueryParams(GetEntityActivityFeedQueryParams queryParams) {
         this.queryParams = queryParams;
         return this;
     }
+    
 }

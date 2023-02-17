@@ -12,4 +12,5 @@ public class EntityManualTriggerConfiguration {
         this.schema = schema;
         return this;
     }
+    
 }

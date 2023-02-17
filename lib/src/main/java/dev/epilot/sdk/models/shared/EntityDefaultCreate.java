@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 public class EntityDefaultCreate {
     @JsonInclude(Include.NON_ABSENT)
@@ -13,6 +12,7 @@ public class EntityDefaultCreate {
         this.searchParams = searchParams;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("table_menu_options")
     public EntityDefaultCreateTableMenuOptions tableMenuOptions;
@@ -20,6 +20,7 @@ public class EntityDefaultCreate {
         this.tableMenuOptions = tableMenuOptions;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("view_type")
     public EntityDefaultCreateViewTypeEnum viewType;
@@ -27,4 +28,5 @@ public class EntityDefaultCreate {
         this.viewType = viewType;
         return this;
     }
+    
 }

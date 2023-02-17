@@ -9,10 +9,12 @@ public class GetRelationsPathParams {
         this.id = id;
         return this;
     }
+    
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slug")
     public String slug;
     public GetRelationsPathParams withSlug(String slug) {
         this.slug = slug;
         return this;
     }
+    
 }

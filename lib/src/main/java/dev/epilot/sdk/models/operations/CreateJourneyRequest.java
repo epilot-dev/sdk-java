@@ -1,7 +1,6 @@
 package dev.epilot.sdk.models.operations;
 
 import dev.epilot.sdk.utils.SpeakeasyMetadata;
-import java.time.OffsetDateTime;
 
 public class CreateJourneyRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
@@ -10,4 +9,5 @@ public class CreateJourneyRequest {
         this.request = request;
         return this;
     }
+    
 }

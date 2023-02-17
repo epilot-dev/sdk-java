@@ -8,14 +8,17 @@ public class GetSavedViewResponse {
         this.contentType = contentType;
         return this;
     }
-    public Long statusCode;
-    public GetSavedViewResponse withStatusCode(Long statusCode) {
+    
+    public Integer statusCode;
+    public GetSavedViewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     public GetSavedView200ApplicationJSON getSavedView200ApplicationJSONObject;
     public GetSavedViewResponse withGetSavedView200ApplicationJSONObject(GetSavedView200ApplicationJSON getSavedView200ApplicationJSONObject) {
         this.getSavedView200ApplicationJSONObject = getSavedView200ApplicationJSONObject;
         return this;
     }
+    
 }

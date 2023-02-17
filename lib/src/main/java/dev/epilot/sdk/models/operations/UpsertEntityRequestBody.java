@@ -1,7 +1,6 @@
 package dev.epilot.sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 public class UpsertEntityRequestBody {
     @JsonProperty("entity")
@@ -10,10 +9,12 @@ public class UpsertEntityRequestBody {
         this.entity = entity;
         return this;
     }
+    
     @JsonProperty("unique_key")
     public String[] uniqueKey;
     public UpsertEntityRequestBody withUniqueKey(String[] uniqueKey) {
         this.uniqueKey = uniqueKey;
         return this;
     }
+    
 }

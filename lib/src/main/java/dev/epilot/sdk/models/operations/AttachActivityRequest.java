@@ -8,9 +8,11 @@ public class AttachActivityRequest {
         this.pathParams = pathParams;
         return this;
     }
+    
     public AttachActivityQueryParams queryParams;
     public AttachActivityRequest withQueryParams(AttachActivityQueryParams queryParams) {
         this.queryParams = queryParams;
         return this;
     }
+    
 }

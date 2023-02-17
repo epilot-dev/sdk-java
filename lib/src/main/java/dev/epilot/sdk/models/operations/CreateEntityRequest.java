@@ -1,7 +1,6 @@
 package dev.epilot.sdk.models.operations;
 
 import dev.epilot.sdk.utils.SpeakeasyMetadata;
-import java.time.OffsetDateTime;
 
 public class CreateEntityRequest {
     public CreateEntityPathParams pathParams;
@@ -9,15 +8,18 @@ public class CreateEntityRequest {
         this.pathParams = pathParams;
         return this;
     }
+    
     public CreateEntityQueryParams queryParams;
     public CreateEntityRequest withQueryParams(CreateEntityQueryParams queryParams) {
         this.queryParams = queryParams;
         return this;
     }
+    
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> request;
     public CreateEntityRequest withRequest(java.util.Map<String, Object> request) {
         this.request = request;
         return this;
     }
+    
 }

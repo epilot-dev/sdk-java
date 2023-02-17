@@ -16,6 +16,7 @@ public class CartCheckoutActionConfig {
         this.allowFailure = allowFailure;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public CartCheckoutConfig config;
@@ -23,6 +24,7 @@ public class CartCheckoutActionConfig {
         this.config = config;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_automatically")
     public Boolean createdAutomatically;
@@ -30,6 +32,7 @@ public class CartCheckoutActionConfig {
         this.createdAutomatically = createdAutomatically;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flow_action_id")
     public String flowActionId;
@@ -37,6 +40,7 @@ public class CartCheckoutActionConfig {
         this.flowActionId = flowActionId;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
@@ -44,6 +48,7 @@ public class CartCheckoutActionConfig {
         this.id = id;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
@@ -51,6 +56,7 @@ public class CartCheckoutActionConfig {
         this.name = name;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public Object type;
@@ -58,4 +64,5 @@ public class CartCheckoutActionConfig {
         this.type = type;
         return this;
     }
+    
 }

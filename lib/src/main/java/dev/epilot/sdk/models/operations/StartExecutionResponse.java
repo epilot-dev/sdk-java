@@ -8,14 +8,17 @@ public class StartExecutionResponse {
         this.automationExecution = automationExecution;
         return this;
     }
+    
     public String contentType;
     public StartExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
-    public Long statusCode;
-    public StartExecutionResponse withStatusCode(Long statusCode) {
+    
+    public Integer statusCode;
+    public StartExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
 }

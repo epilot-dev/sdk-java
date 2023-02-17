@@ -9,4 +9,5 @@ public class CreateNewSchemaVersionQueryParams {
         this.draft = draft;
         return this;
     }
+    
 }

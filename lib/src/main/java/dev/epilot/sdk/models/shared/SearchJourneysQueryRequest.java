@@ -12,6 +12,7 @@ public class SearchJourneysQueryRequest {
         this.from = from;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("q")
     public String q;
@@ -19,6 +20,7 @@ public class SearchJourneysQueryRequest {
         this.q = q;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
@@ -26,6 +28,7 @@ public class SearchJourneysQueryRequest {
         this.size = size;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
     public String sort;
@@ -33,4 +36,5 @@ public class SearchJourneysQueryRequest {
         this.sort = sort;
         return this;
     }
+    
 }

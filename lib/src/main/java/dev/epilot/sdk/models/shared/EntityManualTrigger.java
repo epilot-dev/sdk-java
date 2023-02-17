@@ -9,10 +9,12 @@ public class EntityManualTrigger {
         this.configuration = configuration;
         return this;
     }
+    
     @JsonProperty("type")
     public EntityManualTriggerTypeEnum type;
     public EntityManualTrigger withType(EntityManualTriggerTypeEnum type) {
         this.type = type;
         return this;
     }
+    
 }

@@ -12,10 +12,12 @@ public class MultiSelectAttributeOptions2 {
         this.title = title;
         return this;
     }
+    
     @JsonProperty("value")
     public String value;
     public MultiSelectAttributeOptions2 withValue(String value) {
         this.value = value;
         return this;
     }
+    
 }

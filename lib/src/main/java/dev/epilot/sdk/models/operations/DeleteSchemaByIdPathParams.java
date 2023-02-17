@@ -9,4 +9,5 @@ public class DeleteSchemaByIdPathParams {
         this.slug = slug;
         return this;
     }
+    
 }

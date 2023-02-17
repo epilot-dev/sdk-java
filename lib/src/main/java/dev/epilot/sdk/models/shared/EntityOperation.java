@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 public class EntityOperation {
     @JsonInclude(Include.NON_ABSENT)
@@ -13,6 +12,7 @@ public class EntityOperation {
         this.activityId = activityId;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diff")
     public EntityOperationDiff diff;
@@ -20,24 +20,28 @@ public class EntityOperation {
         this.diff = diff;
         return this;
     }
+    
     @JsonProperty("entity")
     public String entity;
     public EntityOperation withEntity(String entity) {
         this.entity = entity;
         return this;
     }
+    
     @JsonProperty("operation")
     public EntityOperationOperationEnum operation;
     public EntityOperation withOperation(EntityOperationOperationEnum operation) {
         this.operation = operation;
         return this;
     }
+    
     @JsonProperty("org")
     public String org;
     public EntityOperation withOrg(String org) {
         this.org = org;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public EntityOperationParams params;
@@ -45,6 +49,7 @@ public class EntityOperation {
         this.params = params;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public java.util.Map<String, Object> payload;
@@ -52,4 +57,5 @@ public class EntityOperation {
         this.payload = payload;
         return this;
     }
+    
 }

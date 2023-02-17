@@ -8,9 +8,11 @@ public class GetEntityRequest {
         this.pathParams = pathParams;
         return this;
     }
+    
     public GetEntityQueryParams queryParams;
     public GetEntityRequest withQueryParams(GetEntityQueryParams queryParams) {
         this.queryParams = queryParams;
         return this;
     }
+    
 }

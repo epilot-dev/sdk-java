@@ -9,4 +9,5 @@ public class GetActivityPathParams {
         this.id = id;
         return this;
     }
+    
 }

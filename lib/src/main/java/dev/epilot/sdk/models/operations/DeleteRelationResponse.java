@@ -8,9 +8,11 @@ public class DeleteRelationResponse {
         this.contentType = contentType;
         return this;
     }
-    public Long statusCode;
-    public DeleteRelationResponse withStatusCode(Long statusCode) {
+    
+    public Integer statusCode;
+    public DeleteRelationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
 }

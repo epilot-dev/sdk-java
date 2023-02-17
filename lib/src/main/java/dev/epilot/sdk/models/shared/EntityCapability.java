@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 /**
  * EntityCapability
@@ -17,6 +16,7 @@ public class EntityCapability {
         this.purpose = purpose;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public Object[] attributes;
@@ -24,6 +24,7 @@ public class EntityCapability {
         this.attributes = attributes;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feature_flag")
     public String featureFlag;
@@ -31,6 +32,7 @@ public class EntityCapability {
         this.featureFlag = featureFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legacy")
     public Boolean legacy;
@@ -38,12 +40,14 @@ public class EntityCapability {
         this.legacy = legacy;
         return this;
     }
+    
     @JsonProperty("name")
     public String name;
     public EntityCapability withName(String name) {
         this.name = name;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setting_flag")
     public String settingFlag;
@@ -51,6 +55,7 @@ public class EntityCapability {
         this.settingFlag = settingFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
@@ -58,6 +63,7 @@ public class EntityCapability {
         this.title = title;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ui_hooks")
     public java.util.Map<String, Object>[] uiHooks;
@@ -65,4 +71,5 @@ public class EntityCapability {
         this.uiHooks = uiHooks;
         return this;
     }
+    
 }

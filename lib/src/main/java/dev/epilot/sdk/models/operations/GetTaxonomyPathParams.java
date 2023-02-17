@@ -9,4 +9,5 @@ public class GetTaxonomyPathParams {
         this.taxonomySlug = taxonomySlug;
         return this;
     }
+    
 }

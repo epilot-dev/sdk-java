@@ -8,9 +8,11 @@ public class DeleteSchemaByIdRequest {
         this.pathParams = pathParams;
         return this;
     }
+    
     public DeleteSchemaByIdQueryParams queryParams;
     public DeleteSchemaByIdRequest withQueryParams(DeleteSchemaByIdQueryParams queryParams) {
         this.queryParams = queryParams;
         return this;
     }
+    
 }

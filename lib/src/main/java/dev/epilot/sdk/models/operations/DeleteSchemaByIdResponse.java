@@ -8,9 +8,11 @@ public class DeleteSchemaByIdResponse {
         this.contentType = contentType;
         return this;
     }
-    public Long statusCode;
-    public DeleteSchemaByIdResponse withStatusCode(Long statusCode) {
+    
+    public Integer statusCode;
+    public DeleteSchemaByIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
 }

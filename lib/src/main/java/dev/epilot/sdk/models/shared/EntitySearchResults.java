@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 public class EntitySearchResults {
     @JsonInclude(Include.NON_ABSENT)
@@ -13,6 +12,7 @@ public class EntitySearchResults {
         this.hits = hits;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public java.util.Map<String, Object>[] results;
@@ -20,4 +20,5 @@ public class EntitySearchResults {
         this.results = results;
         return this;
     }
+    
 }

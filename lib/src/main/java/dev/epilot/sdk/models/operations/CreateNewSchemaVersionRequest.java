@@ -8,15 +8,18 @@ public class CreateNewSchemaVersionRequest {
         this.pathParams = pathParams;
         return this;
     }
+    
     public CreateNewSchemaVersionQueryParams queryParams;
     public CreateNewSchemaVersionRequest withQueryParams(CreateNewSchemaVersionQueryParams queryParams) {
         this.queryParams = queryParams;
         return this;
     }
+    
     @SpeakeasyMetadata("request:mediaType=application/json")
     public dev.epilot.sdk.models.shared.EntitySchema request;
     public CreateNewSchemaVersionRequest withRequest(dev.epilot.sdk.models.shared.EntitySchema request) {
         this.request = request;
         return this;
     }
+    
 }

@@ -9,4 +9,5 @@ public class TaxonomiesClassificationsSearchQueryParams {
         this.taxonomySlug = taxonomySlug;
         return this;
     }
+    
 }

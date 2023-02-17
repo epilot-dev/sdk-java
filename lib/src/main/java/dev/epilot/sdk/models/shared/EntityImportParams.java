@@ -9,10 +9,12 @@ public class EntityImportParams {
         this.s3Reference = s3Reference;
         return this;
     }
+    
     @JsonProperty("schema")
     public String schema;
     public EntityImportParams withSchema(String schema) {
         this.schema = schema;
         return this;
     }
+    
 }

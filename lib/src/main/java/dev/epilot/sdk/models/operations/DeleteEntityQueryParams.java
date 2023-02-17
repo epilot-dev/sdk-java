@@ -9,4 +9,5 @@ public class DeleteEntityQueryParams {
         this.activityId = activityId;
         return this;
     }
+    
 }

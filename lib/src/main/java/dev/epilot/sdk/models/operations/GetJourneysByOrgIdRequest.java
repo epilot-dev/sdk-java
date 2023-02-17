@@ -8,4 +8,5 @@ public class GetJourneysByOrgIdRequest {
         this.pathParams = pathParams;
         return this;
     }
+    
 }

@@ -9,10 +9,12 @@ public class EntityImportParamsS3Reference {
         this.bucket = bucket;
         return this;
     }
+    
     @JsonProperty("key")
     public String key;
     public EntityImportParamsS3Reference withKey(String key) {
         this.key = key;
         return this;
     }
+    
 }

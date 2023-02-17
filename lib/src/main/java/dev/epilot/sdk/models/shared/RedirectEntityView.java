@@ -12,6 +12,7 @@ public class RedirectEntityView {
         this.route = route;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("view_type")
     public RedirectEntityViewViewTypeEnum viewType;
@@ -19,4 +20,5 @@ public class RedirectEntityView {
         this.viewType = viewType;
         return this;
     }
+    
 }

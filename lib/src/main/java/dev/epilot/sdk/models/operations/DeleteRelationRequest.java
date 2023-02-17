@@ -8,9 +8,11 @@ public class DeleteRelationRequest {
         this.pathParams = pathParams;
         return this;
     }
+    
     public DeleteRelationQueryParams queryParams;
     public DeleteRelationRequest withQueryParams(DeleteRelationQueryParams queryParams) {
         this.queryParams = queryParams;
         return this;
     }
+    
 }

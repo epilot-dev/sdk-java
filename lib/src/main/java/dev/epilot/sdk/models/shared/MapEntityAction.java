@@ -3,7 +3,6 @@ package dev.epilot.sdk.models.shared;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.time.OffsetDateTime;
 
 public class MapEntityAction {
     @JsonInclude(Include.NON_ABSENT)
@@ -13,6 +12,7 @@ public class MapEntityAction {
         this.allowFailure = allowFailure;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public MapEntityConfig config;
@@ -20,6 +20,7 @@ public class MapEntityAction {
         this.config = config;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_automatically")
     public Boolean createdAutomatically;
@@ -27,6 +28,7 @@ public class MapEntityAction {
         this.createdAutomatically = createdAutomatically;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_output")
     public ErrorOutput errorOutput;
@@ -34,6 +36,7 @@ public class MapEntityAction {
         this.errorOutput = errorOutput;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("execution_status")
     public ExecutionStatusEnum executionStatus;
@@ -41,6 +44,7 @@ public class MapEntityAction {
         this.executionStatus = executionStatus;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flow_action_id")
     public String flowActionId;
@@ -48,6 +52,7 @@ public class MapEntityAction {
         this.flowActionId = flowActionId;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
@@ -55,6 +60,7 @@ public class MapEntityAction {
         this.id = id;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
@@ -62,6 +68,7 @@ public class MapEntityAction {
         this.name = name;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputs")
     public java.util.Map<String, Object> outputs;
@@ -69,6 +76,7 @@ public class MapEntityAction {
         this.outputs = outputs;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retry_strategy")
     public RetryStrategyEnum retryStrategy;
@@ -76,6 +84,7 @@ public class MapEntityAction {
         this.retryStrategy = retryStrategy;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("started_at")
     public String startedAt;
@@ -83,6 +92,7 @@ public class MapEntityAction {
         this.startedAt = startedAt;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public Object type;
@@ -90,6 +100,7 @@ public class MapEntityAction {
         this.type = type;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
@@ -97,4 +108,5 @@ public class MapEntityAction {
         this.updatedAt = updatedAt;
         return this;
     }
+    
 }
