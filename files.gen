@@ -9,6 +9,12 @@ lib/src/main/java/dev/epilot/sdk/Taxonomy.java
 lib/src/main/java/dev/epilot/sdk/Executions.java
 lib/src/main/java/dev/epilot/sdk/Flows.java
 lib/src/main/java/dev/epilot/sdk/EpilotAPI.java
+.gitattributes
+.gitignore
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+gradlew
+gradlew.bat
 lib/build.gradle
 lib/src/main/java/dev/epilot/sdk/utils/DateTimeDeserializer.java
 lib/src/main/java/dev/epilot/sdk/utils/DateTimeSerializer.java

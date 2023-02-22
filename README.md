@@ -8,7 +8,7 @@ Epilot is the digital foundation for sales, service, network and implementation 
 ### Gradle
 
 ```groovy
-implementation 'dev.epilot.sdk:epilot-sdk-java:1.3.2'
+implementation 'dev.epilot.sdk:epilot-sdk-java:1.4.0'
 ```
 <!-- End SDK Installation -->
 
