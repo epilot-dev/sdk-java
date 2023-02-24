@@ -1,9 +1,9 @@
 management:
     openapi-checksum: e5a0a41f38f047f4f80691166ac20b34
     openapi-version: 1.0.0
-    speakeasy-version: 1.4.8
+    speakeasy-version: 1.5.0
 java:
-    version: 1.4.1
+    version: 1.5.0
     packagename: dev.epilot.sdk
     projectname: epilot-sdk-java
 sdkclassname: EpilotAPI
