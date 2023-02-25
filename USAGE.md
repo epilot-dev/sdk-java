@@ -25,7 +25,7 @@ public class Application {
                     id = "unde";
                 }};
                 queryParams = new AttachActivityQueryParams() {{
-                    entities = new String[]() {{
+                    entities = new String[]{{
                         add("porro"),
                         add("nulla"),
                         add("id"),
