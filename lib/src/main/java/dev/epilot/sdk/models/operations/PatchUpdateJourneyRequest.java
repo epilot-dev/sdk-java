@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 import dev.epilot.sdk.utils.SpeakeasyMetadata;
+
 public class PatchUpdateJourneyRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> request;
@@ -8,4 +9,5 @@ public class PatchUpdateJourneyRequest {
         this.request = request;
         return this;
     }
+    
 }

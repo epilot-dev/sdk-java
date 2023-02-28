@@ -1,11 +1,13 @@
 package dev.epilot.sdk;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.epilot.sdk.utils.HTTPClient;
 import dev.epilot.sdk.utils.HTTPRequest;
-import java.net.http.HttpResponse;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.nio.charset.StandardCharsets;
+import dev.epilot.sdk.utils.JSON;
 import dev.epilot.sdk.utils.SerializedBody;
+import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
+import java.time.OffsetDateTime;
 import org.apache.http.NameValuePair;
 
 public class Taxonomy {
@@ -24,8 +26,7 @@ public class Taxonomy {
 		this._sdkVersion = sdkVersion;
 		this._genVersion = genVersion;
 	}
-	
-	
+    
     /**
      * getTaxonomy - getTaxonomy
      *
@@ -44,18 +45,17 @@ public class Taxonomy {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.GetTaxonomyResponse res = new dev.epilot.sdk.models.operations.GetTaxonomyResponse() {{
             taxonomy = null;
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 200) {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = new ObjectMapper();
-                mapper.findAndRegisterModules();
+                ObjectMapper mapper = JSON.getMapper();
                 dev.epilot.sdk.models.shared.Taxonomy out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.shared.Taxonomy.class);
                 res.taxonomy = out;
             }
@@ -63,8 +63,7 @@ public class Taxonomy {
 
         return res;
     }
-	
-	
+    
     /**
      * listTaxonomies - listTaxonomies
      *
@@ -83,27 +82,25 @@ public class Taxonomy {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.ListTaxonomiesResponse res = new dev.epilot.sdk.models.operations.ListTaxonomiesResponse() {{
             listTaxonomies200ApplicationJSONObject = null;
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 200) {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = new ObjectMapper();
-                mapper.findAndRegisterModules();
-                dev.epilot.sdk.models.operations.ListTaxonomies200ApplicationJson out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.ListTaxonomies200ApplicationJson.class);
+                ObjectMapper mapper = JSON.getMapper();
+                dev.epilot.sdk.models.operations.ListTaxonomies200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.ListTaxonomies200ApplicationJSON.class);
                 res.listTaxonomies200ApplicationJSONObject = out;
             }
         }
 
         return res;
     }
-	
-	
+    
     /**
      * taxonomiesClassificationsSearch - taxonomiesClassificationsSearch
      *
@@ -130,27 +127,25 @@ public class Taxonomy {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.TaxonomiesClassificationsSearchResponse res = new dev.epilot.sdk.models.operations.TaxonomiesClassificationsSearchResponse() {{
             taxonomiesClassificationsSearch200ApplicationJSONObject = null;
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 200) {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = new ObjectMapper();
-                mapper.findAndRegisterModules();
-                dev.epilot.sdk.models.operations.TaxonomiesClassificationsSearch200ApplicationJson out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.TaxonomiesClassificationsSearch200ApplicationJson.class);
+                ObjectMapper mapper = JSON.getMapper();
+                dev.epilot.sdk.models.operations.TaxonomiesClassificationsSearch200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.TaxonomiesClassificationsSearch200ApplicationJSON.class);
                 res.taxonomiesClassificationsSearch200ApplicationJSONObject = out;
             }
         }
 
         return res;
     }
-	
-	
+    
     /**
      * taxonomyAutocomplete - taxonomyAutocomplete
      *
@@ -175,27 +170,25 @@ public class Taxonomy {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.TaxonomyAutocompleteResponse res = new dev.epilot.sdk.models.operations.TaxonomyAutocompleteResponse() {{
             taxonomyAutocomplete200ApplicationJSONObject = null;
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 200) {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = new ObjectMapper();
-                mapper.findAndRegisterModules();
-                dev.epilot.sdk.models.operations.TaxonomyAutocomplete200ApplicationJson out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.TaxonomyAutocomplete200ApplicationJson.class);
+                ObjectMapper mapper = JSON.getMapper();
+                dev.epilot.sdk.models.operations.TaxonomyAutocomplete200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.TaxonomyAutocomplete200ApplicationJSON.class);
                 res.taxonomyAutocomplete200ApplicationJSONObject = out;
             }
         }
 
         return res;
     }
-	
-	
+    
     /**
      * updateClassificationsForTaxonomy - updateClassificationsForTaxonomy
      *
@@ -216,24 +209,22 @@ public class Taxonomy {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.UpdateClassificationsForTaxonomyResponse res = new dev.epilot.sdk.models.operations.UpdateClassificationsForTaxonomyResponse() {{
             updateClassificationsForTaxonomy200ApplicationJSONObject = null;
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 200) {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = new ObjectMapper();
-                mapper.findAndRegisterModules();
-                dev.epilot.sdk.models.operations.UpdateClassificationsForTaxonomy200ApplicationJson out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.UpdateClassificationsForTaxonomy200ApplicationJson.class);
+                ObjectMapper mapper = JSON.getMapper();
+                dev.epilot.sdk.models.operations.UpdateClassificationsForTaxonomy200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.UpdateClassificationsForTaxonomy200ApplicationJSON.class);
                 res.updateClassificationsForTaxonomy200ApplicationJSONObject = out;
             }
         }
 
         return res;
     }
-	
 }

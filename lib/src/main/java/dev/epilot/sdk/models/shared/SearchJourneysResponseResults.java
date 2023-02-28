@@ -1,23 +1,25 @@
 package dev.epilot.sdk.models.shared;
 
-import java.time.OffsetDateTime;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import dev.epilot.sdk.utils.DateTimeSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import dev.epilot.sdk.utils.DateTimeDeserializer;
+import dev.epilot.sdk.utils.DateTimeSerializer;
+import java.time.OffsetDateTime;
+
 public class SearchJourneysResponseResults {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonSerialize(contentUsing = DateTimeSerializer.class)
-    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("_created_at")
     public OffsetDateTime createdAt;
     public SearchJourneysResponseResults withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_id")
     public String id;
@@ -25,6 +27,7 @@ public class SearchJourneysResponseResults {
         this.id = id;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_org")
     public String org;
@@ -32,6 +35,7 @@ public class SearchJourneysResponseResults {
         this.org = org;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_schema")
     public String schema;
@@ -39,6 +43,7 @@ public class SearchJourneysResponseResults {
         this.schema = schema;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_tags")
     public String[] tags;
@@ -46,6 +51,7 @@ public class SearchJourneysResponseResults {
         this.tags = tags;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_title")
     public String title;
@@ -53,15 +59,17 @@ public class SearchJourneysResponseResults {
         this.title = title;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
-    @JsonSerialize(contentUsing = DateTimeSerializer.class)
-    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("_updated_at")
     public OffsetDateTime updatedAt;
     public SearchJourneysResponseResults withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public SearchJourneysResponseResultsCreatedBy[] createdBy;
@@ -69,6 +77,7 @@ public class SearchJourneysResponseResults {
         this.createdBy = createdBy;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("design")
     public String design;
@@ -76,6 +85,7 @@ public class SearchJourneysResponseResults {
         this.design = design;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("journey_id")
     public String journeyId;
@@ -83,6 +93,7 @@ public class SearchJourneysResponseResults {
         this.journeyId = journeyId;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("journey_name")
     public String journeyName;
@@ -90,6 +101,7 @@ public class SearchJourneysResponseResults {
         this.journeyName = journeyName;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("journey_type")
     public String journeyType;
@@ -97,6 +109,7 @@ public class SearchJourneysResponseResults {
         this.journeyType = journeyType;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("journey_version")
     public SearchJourneysResponseResultsJourneyVersionEnum journeyVersion;
@@ -104,4 +117,5 @@ public class SearchJourneysResponseResults {
         this.journeyVersion = journeyVersion;
         return this;
     }
+    
 }

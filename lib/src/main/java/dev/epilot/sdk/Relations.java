@@ -1,11 +1,12 @@
 package dev.epilot.sdk;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.epilot.sdk.utils.HTTPClient;
 import dev.epilot.sdk.utils.HTTPRequest;
-import java.net.http.HttpResponse;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.nio.charset.StandardCharsets;
+import dev.epilot.sdk.utils.JSON;
 import dev.epilot.sdk.utils.SerializedBody;
+import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
 import org.apache.http.NameValuePair;
 
 public class Relations {
@@ -24,8 +25,7 @@ public class Relations {
 		this._sdkVersion = sdkVersion;
 		this._genVersion = genVersion;
 	}
-	
-	
+    
     /**
      * addRelations - addRelations
      *
@@ -52,18 +52,17 @@ public class Relations {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.AddRelationsResponse res = new dev.epilot.sdk.models.operations.AddRelationsResponse() {{
             relationItem = null;
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 200) {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = new ObjectMapper();
-                mapper.findAndRegisterModules();
+                ObjectMapper mapper = JSON.getMapper();
                 dev.epilot.sdk.models.shared.RelationItem out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.shared.RelationItem.class);
                 res.relationItem = out;
             }
@@ -71,8 +70,7 @@ public class Relations {
 
         return res;
     }
-	
-	
+    
     /**
      * deleteRelation - deleteRelation
      *
@@ -97,11 +95,11 @@ public class Relations {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.DeleteRelationResponse res = new dev.epilot.sdk.models.operations.DeleteRelationResponse() {{
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 204) {
@@ -109,8 +107,7 @@ public class Relations {
 
         return res;
     }
-	
-	
+    
     /**
      * getRelations - getRelations
      *
@@ -140,18 +137,17 @@ public class Relations {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.GetRelationsResponse res = new dev.epilot.sdk.models.operations.GetRelationsResponse() {{
             getRelationsResp = null;
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 200) {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = new ObjectMapper();
-                mapper.findAndRegisterModules();
+                ObjectMapper mapper = JSON.getMapper();
                 Object[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object[].class);
                 res.getRelationsResp = out;
             }
@@ -159,8 +155,7 @@ public class Relations {
 
         return res;
     }
-	
-	
+    
     /**
      * updateRelation - updateRelation
      *
@@ -187,18 +182,17 @@ public class Relations {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.UpdateRelationResponse res = new dev.epilot.sdk.models.operations.UpdateRelationResponse() {{
             relationItem = null;
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 200) {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = new ObjectMapper();
-                mapper.findAndRegisterModules();
+                ObjectMapper mapper = JSON.getMapper();
                 dev.epilot.sdk.models.shared.RelationItem out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.shared.RelationItem.class);
                 res.relationItem = out;
             }
@@ -206,5 +200,4 @@ public class Relations {
 
         return res;
     }
-	
 }

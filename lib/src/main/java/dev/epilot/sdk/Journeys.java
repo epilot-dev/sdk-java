@@ -1,11 +1,12 @@
 package dev.epilot.sdk;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.epilot.sdk.utils.HTTPClient;
 import dev.epilot.sdk.utils.HTTPRequest;
-import java.net.http.HttpResponse;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.nio.charset.StandardCharsets;
+import dev.epilot.sdk.utils.JSON;
 import dev.epilot.sdk.utils.SerializedBody;
+import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
 import org.apache.http.NameValuePair;
 
 public class Journeys {
@@ -24,8 +25,7 @@ public class Journeys {
 		this._sdkVersion = sdkVersion;
 		this._genVersion = genVersion;
 	}
-	
-	
+    
     /**
      * createJourney - createJourney
      *
@@ -46,18 +46,17 @@ public class Journeys {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.CreateJourneyResponse res = new dev.epilot.sdk.models.operations.CreateJourneyResponse() {{
             journeyResponse = null;
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 201) {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = new ObjectMapper();
-                mapper.findAndRegisterModules();
+                ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), java.util.Map.class);
                 res.journeyResponse = out;
             }
@@ -65,8 +64,7 @@ public class Journeys {
 
         return res;
     }
-	
-	
+    
     /**
      * getJourney - getJourney
      *
@@ -91,18 +89,17 @@ public class Journeys {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.GetJourneyResponse res = new dev.epilot.sdk.models.operations.GetJourneyResponse() {{
             journeyResponse = null;
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 200) {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = new ObjectMapper();
-                mapper.findAndRegisterModules();
+                ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), java.util.Map.class);
                 res.journeyResponse = out;
             }
@@ -110,8 +107,7 @@ public class Journeys {
 
         return res;
     }
-	
-	
+    
     /**
      * getJourneysByOrgId - getJourneysByOrgId
      *
@@ -130,18 +126,17 @@ public class Journeys {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.GetJourneysByOrgIdResponse res = new dev.epilot.sdk.models.operations.GetJourneysByOrgIdResponse() {{
             getJourneysResponse = null;
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 200) {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = new ObjectMapper();
-                mapper.findAndRegisterModules();
+                ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), java.util.Map.class);
                 res.getJourneysResponse = out;
             }
@@ -149,8 +144,7 @@ public class Journeys {
 
         return res;
     }
-	
-	
+    
     /**
      * patchUpdateJourney - patchUpdateJourney
      *
@@ -171,18 +165,17 @@ public class Journeys {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.PatchUpdateJourneyResponse res = new dev.epilot.sdk.models.operations.PatchUpdateJourneyResponse() {{
             journeyResponse = null;
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 200) {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = new ObjectMapper();
-                mapper.findAndRegisterModules();
+                ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), java.util.Map.class);
                 res.journeyResponse = out;
             }
@@ -190,8 +183,7 @@ public class Journeys {
 
         return res;
     }
-	
-	
+    
     /**
      * removeJourney - removeJourney
      *
@@ -210,11 +202,11 @@ public class Journeys {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.RemoveJourneyResponse res = new dev.epilot.sdk.models.operations.RemoveJourneyResponse() {{
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 200) {
@@ -222,8 +214,7 @@ public class Journeys {
 
         return res;
     }
-	
-	
+    
     /**
      * searchJourneys - searchJourneys
      *
@@ -244,18 +235,17 @@ public class Journeys {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.SearchJourneysResponse res = new dev.epilot.sdk.models.operations.SearchJourneysResponse() {{
             searchJourneysResponse = null;
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 200) {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = new ObjectMapper();
-                mapper.findAndRegisterModules();
+                ObjectMapper mapper = JSON.getMapper();
                 dev.epilot.sdk.models.shared.SearchJourneysResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.shared.SearchJourneysResponse.class);
                 res.searchJourneysResponse = out;
             }
@@ -263,8 +253,7 @@ public class Journeys {
 
         return res;
     }
-	
-	
+    
     /**
      * updateJourney - updateJourney
      *
@@ -285,18 +274,17 @@ public class Journeys {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.UpdateJourneyResponse res = new dev.epilot.sdk.models.operations.UpdateJourneyResponse() {{
             journeyResponse = null;
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 200) {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = new ObjectMapper();
-                mapper.findAndRegisterModules();
+                ObjectMapper mapper = JSON.getMapper();
                 java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), java.util.Map.class);
                 res.journeyResponse = out;
             }
@@ -304,5 +292,4 @@ public class Journeys {
 
         return res;
     }
-	
 }

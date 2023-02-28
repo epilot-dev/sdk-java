@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.shared;
 
 import dev.epilot.sdk.utils.SpeakeasyMetadata;
+
 public class SchemeEpilotAuth {
     @SpeakeasyMetadata("security:name=Authorization")
     public String authorization;
@@ -8,4 +9,5 @@ public class SchemeEpilotAuth {
         this.authorization = authorization;
         return this;
     }
+    
 }

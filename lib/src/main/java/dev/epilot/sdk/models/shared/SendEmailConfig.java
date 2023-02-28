@@ -1,8 +1,9 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class SendEmailConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
@@ -11,6 +12,7 @@ public class SendEmailConfig {
         this.attachments = attachments;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_template_id")
     public String emailTemplateId;
@@ -18,6 +20,7 @@ public class SendEmailConfig {
         this.emailTemplateId = emailTemplateId;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language_code")
     public SendEmailConfigLanguageCodeEnum languageCode;
@@ -25,4 +28,5 @@ public class SendEmailConfig {
         this.languageCode = languageCode;
         return this;
     }
+    
 }

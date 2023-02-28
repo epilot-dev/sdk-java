@@ -1,8 +1,9 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class MappingConfigRef {
     @JsonProperty("config_id")
     public String configId;
@@ -10,12 +11,14 @@ public class MappingConfigRef {
         this.configId = configId;
         return this;
     }
+    
     @JsonProperty("target_id")
     public String targetId;
     public MappingConfigRef withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Double version;
@@ -23,4 +26,5 @@ public class MappingConfigRef {
         this.version = version;
         return this;
     }
+    
 }

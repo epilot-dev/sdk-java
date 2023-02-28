@@ -1,13 +1,14 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SavedViewItemCreatedBy1
  * A user that created the view
-**/public class SavedViewItemCreatedBy1 {
+**/
+public class SavedViewItemCreatedBy1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public String userId;
@@ -15,4 +16,5 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.userId = userId;
         return this;
     }
+    
 }

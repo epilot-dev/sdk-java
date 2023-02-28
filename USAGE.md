@@ -2,13 +2,13 @@
 ```java
 package hello.world;
 
-import dev.epilot.sdk.EpilotApi;
+import dev.epilot.sdk.EpilotAPI;
 import dev.epilot.sdk.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            EpilotApi.Builder builder = EpilotApi.builder();
+            EpilotAPI.Builder builder = EpilotAPI.builder();
 
             builder.setSecurity(
                 new Security() {{
@@ -18,15 +18,17 @@ public class Application {
                 }}
             );
 
-            EpilotApi sdk = builder.build();
+            EpilotAPI sdk = builder.build();
 
             AttachActivityRequest req = new AttachActivityRequest() {{
                 pathParams = new AttachActivityPathParams() {{
-                    id = "sit";
+                    id = "unde";
                 }};
                 queryParams = new AttachActivityQueryParams() {{
-                    entities = new String[]() {{
-                        add("culpa"),
+                    entities = new String[]{{
+                        add("porro"),
+                        add("nulla"),
+                        add("id"),
                     }};
                 }};
             }};

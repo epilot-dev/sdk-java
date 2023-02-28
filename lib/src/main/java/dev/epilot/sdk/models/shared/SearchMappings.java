@@ -1,8 +1,9 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class SearchMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
@@ -11,6 +12,7 @@ public class SearchMappings {
         this.fields = fields;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Boolean index;
@@ -18,6 +20,7 @@ public class SearchMappings {
         this.index = index;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SearchMappingsTypeEnum type;
@@ -25,4 +28,5 @@ public class SearchMappings {
         this.type = type;
         return this;
     }
+    
 }

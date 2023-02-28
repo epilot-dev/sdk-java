@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 import dev.epilot.sdk.utils.SpeakeasyMetadata;
+
 public class CreateNewSchemaVersionQueryParams {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=draft")
     public Boolean draft;
@@ -8,4 +9,5 @@ public class CreateNewSchemaVersionQueryParams {
         this.draft = draft;
         return this;
     }
+    
 }

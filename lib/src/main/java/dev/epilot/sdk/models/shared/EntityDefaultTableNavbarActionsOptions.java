@@ -1,8 +1,9 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class EntityDefaultTableNavbarActionsOptions {
     @JsonProperty("label")
     public String label;
@@ -10,6 +11,7 @@ public class EntityDefaultTableNavbarActionsOptions {
         this.label = label;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public java.util.Map<String, Object> params;
@@ -17,4 +19,5 @@ public class EntityDefaultTableNavbarActionsOptions {
         this.params = params;
         return this;
     }
+    
 }

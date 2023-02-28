@@ -1,8 +1,9 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class EntitySchemaItemGroupSettingsInfoTooltipTitle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")
@@ -11,6 +12,7 @@ public class EntitySchemaItemGroupSettingsInfoTooltipTitle {
         this.default_ = default_;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
@@ -18,4 +20,5 @@ public class EntitySchemaItemGroupSettingsInfoTooltipTitle {
         this.key = key;
         return this;
     }
+    
 }

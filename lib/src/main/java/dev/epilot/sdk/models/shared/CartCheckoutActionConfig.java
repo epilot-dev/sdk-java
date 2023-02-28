@@ -1,13 +1,14 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CartCheckoutActionConfig
  * Creates an order entity with prices from journey
-**/public class CartCheckoutActionConfig {
+**/
+public class CartCheckoutActionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_failure")
     public Boolean allowFailure;
@@ -15,6 +16,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.allowFailure = allowFailure;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public CartCheckoutConfig config;
@@ -22,6 +24,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.config = config;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_automatically")
     public Boolean createdAutomatically;
@@ -29,6 +32,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.createdAutomatically = createdAutomatically;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flow_action_id")
     public String flowActionId;
@@ -36,6 +40,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.flowActionId = flowActionId;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
@@ -43,6 +48,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.id = id;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
@@ -50,6 +56,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.name = name;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public Object type;
@@ -57,4 +64,5 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.type = type;
         return this;
     }
+    
 }

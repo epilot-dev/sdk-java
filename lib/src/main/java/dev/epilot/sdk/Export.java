@@ -2,8 +2,8 @@ package dev.epilot.sdk;
 
 import dev.epilot.sdk.utils.HTTPClient;
 import dev.epilot.sdk.utils.HTTPRequest;
-import java.net.http.HttpResponse;
 import dev.epilot.sdk.utils.SerializedBody;
+import java.net.http.HttpResponse;
 import org.apache.http.NameValuePair;
 
 public class Export {
@@ -22,8 +22,7 @@ public class Export {
 		this._sdkVersion = sdkVersion;
 		this._genVersion = genVersion;
 	}
-	
-	
+    
     /**
      * exportEntities - exportEntities
      *
@@ -50,11 +49,11 @@ public class Export {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.ExportEntitiesResponse res = new dev.epilot.sdk.models.operations.ExportEntitiesResponse() {{
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 201) {
@@ -62,8 +61,7 @@ public class Export {
 
         return res;
     }
-	
-	
+    
     /**
      * importEntities - importEntities
      *
@@ -90,11 +88,11 @@ public class Export {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.ImportEntitiesResponse res = new dev.epilot.sdk.models.operations.ImportEntitiesResponse() {{
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 201) {
@@ -102,5 +100,4 @@ public class Export {
 
         return res;
     }
-	
 }

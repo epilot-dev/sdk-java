@@ -4,6 +4,7 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -13,8 +14,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class QueryParameters {
     public static List<NameValuePair> parseQueryParams(Object queryParams) throws Exception {
-        queryParams = Types.getValue(queryParams);
-
         if (queryParams == null) {
             return null;
         }
@@ -24,7 +23,7 @@ public class QueryParameters {
         Field[] fields = queryParams.getClass().getFields();
 
         for (Field field : fields) {
-            Object value = Types.getValue(field.get(queryParams));
+            Object value = field.get(queryParams);
             if (value == null) {
                 continue;
             }
@@ -60,8 +59,7 @@ public class QueryParameters {
 
         switch (queryParamsMetadata.serialization) {
             case "json":
-                ObjectMapper mapper = new ObjectMapper();
-                mapper.findAndRegisterModules();
+                ObjectMapper mapper = JSON.getMapper();
                 String json = mapper.writeValueAsString(value);
 
                 params.add(new BasicNameValuePair(queryParamsMetadata.name, json));
@@ -84,9 +82,9 @@ public class QueryParameters {
 
                 for (Object v : array) {
                     if (queryParamsMetadata.explode) {
-                        values.add(String.valueOf(v));
+                        values.add(Utils.valToString(v));
                     } else {
-                        items.add(String.valueOf(v));
+                        items.add(Utils.valToString(v));
                     }
                 }
 
@@ -94,7 +92,7 @@ public class QueryParameters {
                     values.add(String.join(",", items));
                 }
 
-                params.addAll(values.stream().map(v -> new BasicNameValuePair(queryParamsMetadata.name, v)).toList());
+                params.addAll(values.stream().map(v -> new BasicNameValuePair(queryParamsMetadata.name, v)).collect(Collectors.toList()));
                 break;
             }
             case MAP: {
@@ -103,8 +101,8 @@ public class QueryParameters {
                 List<String> items = new ArrayList<>();
 
                 for (Map.Entry<?, ?> entry : map.entrySet()) {
-                    String key = String.valueOf(entry.getKey());
-                    String val = String.valueOf(entry.getValue());
+                    String key = Utils.valToString(entry.getKey());
+                    String val = Utils.valToString(entry.getValue());
 
                     if (queryParamsMetadata.explode) {
                         params.add(new BasicNameValuePair(key, val));
@@ -118,16 +116,13 @@ public class QueryParameters {
                 }
                 break;
             }
-            case PRIMITIVE:
-                params.add(new BasicNameValuePair(queryParamsMetadata.name, String.valueOf(value)));
-                break;
             case OBJECT: {
                 Field[] fields = value.getClass().getFields();
 
                 List<String> items = new ArrayList<>();
 
                 for (Field field : fields) {
-                    Object val = Types.getValue(field.get(value));
+                    Object val = field.get(value);
                     if (val == null) {
                         continue;
                     }
@@ -138,9 +133,9 @@ public class QueryParameters {
                     }
 
                     if (queryParamsMetadata.explode) {
-                        params.add(new BasicNameValuePair(metadata.name, String.valueOf(val)));
+                        params.add(new BasicNameValuePair(metadata.name, Utils.valToString(val)));
                     } else {
-                        items.add(String.format("%s,%s", metadata.name, String.valueOf(val)));
+                        items.add(String.format("%s,%s", metadata.name, Utils.valToString(val)));
                     }
                 }
 
@@ -149,6 +144,9 @@ public class QueryParameters {
                 }
                 break;
             }
+            default:
+                params.add(new BasicNameValuePair(queryParamsMetadata.name, Utils.valToString(value)));
+                break;
         }
 
         return params;
@@ -163,17 +161,17 @@ public class QueryParameters {
                 Map<?, ?> map = (Map<?, ?>) value;
 
                 for (Map.Entry<?, ?> entry : map.entrySet()) {
-                    String key = String.valueOf(entry.getKey());
+                    String key = Utils.valToString(entry.getKey());
                     Object val = entry.getValue();
 
                     if (val.getClass().isArray()) {
                         for (Object v : (Object[]) val) {
                             params.add(new BasicNameValuePair(String.format("%s[%s]", queryParamsMetadata.name, key),
-                                    String.valueOf(v)));
+                                    Utils.valToString(v)));
                         }
                     } else {
                         params.add(new BasicNameValuePair(String.format("%s[%s]", queryParamsMetadata.name, key),
-                                String.valueOf(val)));
+                                Utils.valToString(val)));
                     }
                 }
 
@@ -183,7 +181,7 @@ public class QueryParameters {
                 Field[] fields = value.getClass().getFields();
 
                 for (Field field : fields) {
-                    Object val = Types.getValue(field.get(value));
+                    Object val = field.get(value);
                     if (val == null) {
                         continue;
                     }
@@ -193,8 +191,17 @@ public class QueryParameters {
                         continue;
                     }
 
-                    params.add(new BasicNameValuePair(String.format("%s[%s]", queryParamsMetadata.name, metadata.name),
-                            String.valueOf(val)));
+                    if (val.getClass().isArray()) {
+                        for (Object v : (Object[]) val) {
+                            params.add(new BasicNameValuePair(
+                                    String.format("%s[%s]", queryParamsMetadata.name, metadata.name),
+                                    Utils.valToString(v)));
+                        }
+                    } else {
+                        params.add(
+                                new BasicNameValuePair(String.format("%s[%s]", queryParamsMetadata.name, metadata.name),
+                                        Utils.valToString(val)));
+                    }
                 }
 
                 return params;

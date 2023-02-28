@@ -1,11 +1,12 @@
 package dev.epilot.sdk;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.epilot.sdk.utils.HTTPClient;
 import dev.epilot.sdk.utils.HTTPRequest;
-import java.net.http.HttpResponse;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.nio.charset.StandardCharsets;
+import dev.epilot.sdk.utils.JSON;
 import dev.epilot.sdk.utils.SerializedBody;
+import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
 
 public class SavedViews {
 	private HTTPClient _defaultClient;
@@ -23,8 +24,7 @@ public class SavedViews {
 		this._sdkVersion = sdkVersion;
 		this._genVersion = genVersion;
 	}
-	
-	
+    
     /**
      * createSavedView - createSavedView
      *
@@ -45,18 +45,17 @@ public class SavedViews {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.CreateSavedViewResponse res = new dev.epilot.sdk.models.operations.CreateSavedViewResponse() {{
             savedViewItem = null;
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 201) {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = new ObjectMapper();
-                mapper.findAndRegisterModules();
+                ObjectMapper mapper = JSON.getMapper();
                 dev.epilot.sdk.models.shared.SavedViewItem out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.shared.SavedViewItem.class);
                 res.savedViewItem = out;
             }
@@ -64,8 +63,7 @@ public class SavedViews {
 
         return res;
     }
-	
-	
+    
     /**
      * deleteSavedView - deleteSavedView
      *
@@ -84,11 +82,11 @@ public class SavedViews {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.DeleteSavedViewResponse res = new dev.epilot.sdk.models.operations.DeleteSavedViewResponse() {{
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 200) {
@@ -96,8 +94,7 @@ public class SavedViews {
 
         return res;
     }
-	
-	
+    
     /**
      * getSavedView - getSavedView
      *
@@ -116,27 +113,25 @@ public class SavedViews {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.GetSavedViewResponse res = new dev.epilot.sdk.models.operations.GetSavedViewResponse() {{
             getSavedView200ApplicationJSONObject = null;
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 200) {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = new ObjectMapper();
-                mapper.findAndRegisterModules();
-                dev.epilot.sdk.models.operations.GetSavedView200ApplicationJson out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.GetSavedView200ApplicationJson.class);
+                ObjectMapper mapper = JSON.getMapper();
+                dev.epilot.sdk.models.operations.GetSavedView200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.GetSavedView200ApplicationJSON.class);
                 res.getSavedView200ApplicationJSONObject = out;
             }
         }
 
         return res;
     }
-	
-	
+    
     /**
      * listSavedViews - listSavedViews
      *
@@ -155,27 +150,25 @@ public class SavedViews {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.ListSavedViewsResponse res = new dev.epilot.sdk.models.operations.ListSavedViewsResponse() {{
             listSavedViews200ApplicationJSONObject = null;
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 200) {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = new ObjectMapper();
-                mapper.findAndRegisterModules();
-                dev.epilot.sdk.models.operations.ListSavedViews200ApplicationJson out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.ListSavedViews200ApplicationJson.class);
+                ObjectMapper mapper = JSON.getMapper();
+                dev.epilot.sdk.models.operations.ListSavedViews200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.operations.ListSavedViews200ApplicationJSON.class);
                 res.listSavedViews200ApplicationJSONObject = out;
             }
         }
 
         return res;
     }
-	
-	
+    
     /**
      * updateSavedView - updateSavedView
      *
@@ -196,18 +189,17 @@ public class SavedViews {
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
-        String contentType = httpRes.headers().allValues("Content-Type").get(0);
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
         dev.epilot.sdk.models.operations.UpdateSavedViewResponse res = new dev.epilot.sdk.models.operations.UpdateSavedViewResponse() {{
             savedViewItem = null;
         }};
-        res.statusCode = Long.valueOf(httpRes.statusCode());
+        res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
         
         if (httpRes.statusCode() == 200) {
             if (dev.epilot.sdk.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = new ObjectMapper();
-                mapper.findAndRegisterModules();
+                ObjectMapper mapper = JSON.getMapper();
                 dev.epilot.sdk.models.shared.SavedViewItem out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), dev.epilot.sdk.models.shared.SavedViewItem.class);
                 res.savedViewItem = out;
             }
@@ -215,5 +207,4 @@ public class SavedViews {
 
         return res;
     }
-	
 }

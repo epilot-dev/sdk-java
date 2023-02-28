@@ -1,6 +1,6 @@
 package dev.epilot.sdk.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonValue;
 public enum ErrorCodeEnum {
     MAPPING_ERROR("MAPPING_ERROR"),
     REFRESH_RELATIONS_ERROR("REFRESH_RELATIONS_ERROR"),
@@ -10,6 +10,7 @@ public enum ErrorCodeEnum {
     BAD_CONFIG("BAD_CONFIG"),
     INTERNAL_ERROR("INTERNAL_ERROR");
 
+    @JsonValue
     public final String value;
 
     private ErrorCodeEnum(String value) {

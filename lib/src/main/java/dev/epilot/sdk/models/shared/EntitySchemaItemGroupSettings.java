@@ -1,8 +1,9 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class EntitySchemaItemGroupSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_purpose")
@@ -11,6 +12,7 @@ public class EntitySchemaItemGroupSettings {
         this.purpose = purpose;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expanded")
     public Boolean expanded;
@@ -18,6 +20,7 @@ public class EntitySchemaItemGroupSettings {
         this.expanded = expanded;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feature_flag")
     public String featureFlag;
@@ -25,12 +28,14 @@ public class EntitySchemaItemGroupSettings {
         this.featureFlag = featureFlag;
         return this;
     }
+    
     @JsonProperty("id")
     public String id;
     public EntitySchemaItemGroupSettings withId(String id) {
         this.id = id;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info_tooltip_title")
     public EntitySchemaItemGroupSettingsInfoTooltipTitle infoTooltipTitle;
@@ -38,12 +43,14 @@ public class EntitySchemaItemGroupSettings {
         this.infoTooltipTitle = infoTooltipTitle;
         return this;
     }
+    
     @JsonProperty("label")
     public String label;
     public EntitySchemaItemGroupSettings withLabel(String label) {
         this.label = label;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Long order;
@@ -51,6 +58,7 @@ public class EntitySchemaItemGroupSettings {
         this.order = order;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("render_condition")
     public String renderCondition;
@@ -58,6 +66,7 @@ public class EntitySchemaItemGroupSettings {
         this.renderCondition = renderCondition;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setting_flag")
     public String settingFlag;
@@ -65,4 +74,5 @@ public class EntitySchemaItemGroupSettings {
         this.settingFlag = settingFlag;
         return this;
     }
+    
 }

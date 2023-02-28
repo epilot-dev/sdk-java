@@ -1,8 +1,9 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class MapEntityActionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_failure")
@@ -11,6 +12,7 @@ public class MapEntityActionConfig {
         this.allowFailure = allowFailure;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public MapEntityConfig config;
@@ -18,6 +20,7 @@ public class MapEntityActionConfig {
         this.config = config;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_automatically")
     public Boolean createdAutomatically;
@@ -25,6 +28,7 @@ public class MapEntityActionConfig {
         this.createdAutomatically = createdAutomatically;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flow_action_id")
     public String flowActionId;
@@ -32,6 +36,7 @@ public class MapEntityActionConfig {
         this.flowActionId = flowActionId;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
@@ -39,6 +44,7 @@ public class MapEntityActionConfig {
         this.id = id;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
@@ -46,6 +52,7 @@ public class MapEntityActionConfig {
         this.name = name;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public Object type;
@@ -53,4 +60,5 @@ public class MapEntityActionConfig {
         this.type = type;
         return this;
     }
+    
 }

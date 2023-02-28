@@ -1,8 +1,8 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SummaryAttribute
@@ -18,7 +18,8 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
  * ```
  * The value field supports handlebar expressions from which you can pick any field from the entity state.
  * 
-**/public class SummaryAttribute {
+**/
+public class SummaryAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feature_flag")
     public String featureFlag;
@@ -26,12 +27,14 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.featureFlag = featureFlag;
         return this;
     }
+    
     @JsonProperty("label")
     public String label;
     public SummaryAttribute withLabel(String label) {
         this.label = label;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("render_condition")
     public String renderCondition;
@@ -39,6 +42,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.renderCondition = renderCondition;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setting_flag")
     public String settingFlag;
@@ -46,6 +50,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.settingFlag = settingFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_as_tag")
     public Boolean showAsTag;
@@ -53,6 +58,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.showAsTag = showAsTag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag_color")
     public String tagColor;
@@ -60,10 +66,12 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.tagColor = tagColor;
         return this;
     }
+    
     @JsonProperty("value")
     public String value;
     public SummaryAttribute withValue(String value) {
         this.value = value;
         return this;
     }
+    
 }

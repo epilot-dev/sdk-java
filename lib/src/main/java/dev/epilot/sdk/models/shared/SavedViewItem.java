@@ -1,13 +1,14 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SavedViewItem
  * A saved entity view
-**/public class SavedViewItem {
+**/
+public class SavedViewItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
@@ -15,12 +16,14 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.createdAt = createdAt;
         return this;
     }
+    
     @JsonProperty("created_by")
     public Object createdBy;
     public SavedViewItem withCreatedBy(Object createdBy) {
         this.createdBy = createdBy;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
@@ -28,12 +31,14 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.id = id;
         return this;
     }
+    
     @JsonProperty("name")
     public String name;
     public SavedViewItem withName(String name) {
         this.name = name;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org")
     public String org;
@@ -41,6 +46,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.org = org;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shared")
     public Boolean shared;
@@ -48,18 +54,21 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.shared = shared;
         return this;
     }
+    
     @JsonProperty("slug")
     public String[] slug;
     public SavedViewItem withSlug(String[] slug) {
         this.slug = slug;
         return this;
     }
+    
     @JsonProperty("ui_config")
     public java.util.Map<String, Object> uiConfig;
     public SavedViewItem withUiConfig(java.util.Map<String, Object> uiConfig) {
         this.uiConfig = uiConfig;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
@@ -67,4 +76,5 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.updatedAt = updatedAt;
         return this;
     }
+    
 }

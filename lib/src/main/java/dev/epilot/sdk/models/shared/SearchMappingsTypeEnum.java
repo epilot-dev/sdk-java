@@ -1,6 +1,6 @@
 package dev.epilot.sdk.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonValue;
 public enum SearchMappingsTypeEnum {
     KEYWORD("keyword"),
     TEXT("text"),
@@ -12,6 +12,7 @@ public enum SearchMappingsTypeEnum {
     FLATTENED("flattened"),
     NESTED("nested");
 
+    @JsonValue
     public final String value;
 
     private SearchMappingsTypeEnum(String value) {

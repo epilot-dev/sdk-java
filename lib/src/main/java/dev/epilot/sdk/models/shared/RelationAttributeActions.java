@@ -1,8 +1,9 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class RelationAttributeActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action_type")
@@ -11,6 +12,7 @@ public class RelationAttributeActions {
         this.actionType = actionType;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")
     public Boolean default_;
@@ -18,6 +20,7 @@ public class RelationAttributeActions {
         this.default_ = default_;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feature_flag")
     public String featureFlag;
@@ -25,6 +28,7 @@ public class RelationAttributeActions {
         this.featureFlag = featureFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
@@ -32,6 +36,7 @@ public class RelationAttributeActions {
         this.label = label;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("new_entity_item")
     public java.util.Map<String, Object> newEntityItem;
@@ -39,6 +44,7 @@ public class RelationAttributeActions {
         this.newEntityItem = newEntityItem;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setting_flag")
     public String settingFlag;
@@ -46,4 +52,5 @@ public class RelationAttributeActions {
         this.settingFlag = settingFlag;
         return this;
     }
+    
 }

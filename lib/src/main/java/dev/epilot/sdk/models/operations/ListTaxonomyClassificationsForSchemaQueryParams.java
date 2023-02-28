@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 import dev.epilot.sdk.utils.SpeakeasyMetadata;
+
 public class ListTaxonomyClassificationsForSchemaQueryParams {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
@@ -8,10 +9,12 @@ public class ListTaxonomyClassificationsForSchemaQueryParams {
         this.query = query;
         return this;
     }
+    
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Double size;
     public ListTaxonomyClassificationsForSchemaQueryParams withSize(Double size) {
         this.size = size;
         return this;
     }
+    
 }

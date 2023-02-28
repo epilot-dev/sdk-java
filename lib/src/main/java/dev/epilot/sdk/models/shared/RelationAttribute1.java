@@ -1,8 +1,9 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class RelationAttribute1 {
     @JsonProperty("mode")
     public RelationAttribute1ModeEnum mode;
@@ -10,6 +11,7 @@ public class RelationAttribute1 {
         this.mode = mode;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("related_to")
     public java.util.Map<String, Object> relatedTo;
@@ -17,6 +19,7 @@ public class RelationAttribute1 {
         this.relatedTo = relatedTo;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_filter")
     public RelationAttribute1SourceFilter sourceFilter;
@@ -24,12 +27,14 @@ public class RelationAttribute1 {
         this.sourceFilter = sourceFilter;
         return this;
     }
+    
     @JsonProperty("target")
     public String target;
     public RelationAttribute1 withTarget(String target) {
         this.target = target;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_tags")
     public String[] targetTags;
@@ -37,6 +42,7 @@ public class RelationAttribute1 {
         this.targetTags = targetTags;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_tags_include_source")
     public Boolean targetTagsIncludeSource;
@@ -44,4 +50,5 @@ public class RelationAttribute1 {
         this.targetTagsIncludeSource = targetTagsIncludeSource;
         return this;
     }
+    
 }

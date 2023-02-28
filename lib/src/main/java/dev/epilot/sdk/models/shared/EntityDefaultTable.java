@@ -1,8 +1,9 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class EntityDefaultTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classic_view")
@@ -11,6 +12,7 @@ public class EntityDefaultTable {
         this.classicView = classicView;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dropdown_items")
     public EntityDefaultTableDropdownItems[] dropdownItems;
@@ -18,6 +20,7 @@ public class EntityDefaultTable {
         this.dropdownItems = dropdownItems;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable_thumbnails")
     public Boolean enableThumbnails;
@@ -25,6 +28,7 @@ public class EntityDefaultTable {
         this.enableThumbnails = enableThumbnails;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("navbar_actions")
     public EntityDefaultTableNavbarActions[] navbarActions;
@@ -32,6 +36,7 @@ public class EntityDefaultTable {
         this.navbarActions = navbarActions;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("row_actions")
     public String[] rowActions;
@@ -39,6 +44,7 @@ public class EntityDefaultTable {
         this.rowActions = rowActions;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("view_type")
     public EntityDefaultTableViewTypeEnum viewType;
@@ -46,4 +52,5 @@ public class EntityDefaultTable {
         this.viewType = viewType;
         return this;
     }
+    
 }

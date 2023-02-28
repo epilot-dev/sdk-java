@@ -1,8 +1,9 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Activity {
     @JsonProperty("message")
     public String message;
@@ -10,6 +11,7 @@ public class Activity {
         this.message = message;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public java.util.Map<String, Object> payload;
@@ -17,16 +19,19 @@ public class Activity {
         this.payload = payload;
         return this;
     }
+    
     @JsonProperty("title")
     public String title;
     public Activity withTitle(String title) {
         this.title = title;
         return this;
     }
+    
     @JsonProperty("type")
     public String type;
     public Activity withType(String type) {
         this.type = type;
         return this;
     }
+    
 }

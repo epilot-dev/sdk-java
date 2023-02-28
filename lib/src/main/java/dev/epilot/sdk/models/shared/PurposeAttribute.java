@@ -1,18 +1,19 @@
 package dev.epilot.sdk.models.shared;
 
-import java.time.OffsetDateTime;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import dev.epilot.sdk.utils.DateTimeSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import dev.epilot.sdk.utils.DateTimeDeserializer;
+import dev.epilot.sdk.utils.DateTimeSerializer;
+import java.time.OffsetDateTime;
 
 /**
  * PurposeAttribute
  * Entity Taxonomy
-**/public class PurposeAttribute {
+**/
+public class PurposeAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_purpose")
     public String[] purpose;
@@ -20,6 +21,7 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.purpose = purpose;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public java.util.Map<String, Object> constraints;
@@ -27,15 +29,17 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.constraints = constraints;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
-    @JsonSerialize(contentUsing = DateTimeSerializer.class)
-    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
     public PurposeAttribute withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_value")
     public Object defaultValue;
@@ -43,6 +47,7 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.defaultValue = defaultValue;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecated")
     public Boolean deprecated;
@@ -50,6 +55,7 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.deprecated = deprecated;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_builder_disable_edit")
     public Boolean entityBuilderDisableEdit;
@@ -57,6 +63,7 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.entityBuilderDisableEdit = entityBuilderDisableEdit;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feature_flag")
     public String featureFlag;
@@ -64,6 +71,7 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.featureFlag = featureFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public String group;
@@ -71,6 +79,7 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.group = group;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden")
     public Boolean hidden;
@@ -78,6 +87,7 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.hidden = hidden;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hide_label")
     public Boolean hideLabel;
@@ -85,6 +95,7 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.hideLabel = hideLabel;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
@@ -92,6 +103,7 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.icon = icon;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
@@ -99,12 +111,14 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.id = id;
         return this;
     }
+    
     @JsonProperty("label")
     public String label;
     public PurposeAttribute withLabel(String label) {
         this.label = label;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public String layout;
@@ -112,12 +126,14 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.layout = layout;
         return this;
     }
+    
     @JsonProperty("name")
     public String name;
     public PurposeAttribute withName(String name) {
         this.name = name;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Long order;
@@ -125,6 +141,7 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.order = order;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parents")
     public String[] parents;
@@ -132,6 +149,7 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.parents = parents;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeholder")
     public String placeholder;
@@ -139,6 +157,7 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.placeholder = placeholder;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preview_value_formatter")
     public String previewValueFormatter;
@@ -146,6 +165,7 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.previewValueFormatter = previewValueFormatter;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protected")
     public Boolean protected_;
@@ -153,6 +173,7 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.protected_ = protected_;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readonly")
     public Boolean readonly;
@@ -160,6 +181,7 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.readonly = readonly;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("render_condition")
     public String renderCondition;
@@ -167,6 +189,7 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.renderCondition = renderCondition;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
@@ -174,6 +197,7 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.required = required;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setting_flag")
     public String settingFlag;
@@ -181,6 +205,7 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.settingFlag = settingFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_in_table")
     public Boolean showInTable;
@@ -188,6 +213,7 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.showInTable = showInTable;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PurposeAttributeTypeEnum type;
@@ -195,15 +221,17 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.type = type;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
-    @JsonSerialize(contentUsing = DateTimeSerializer.class)
-    @JsonDeserialize(contentUsing = DateTimeDeserializer.class)
+    @JsonSerialize(using = DateTimeSerializer.class)
+    @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
     public PurposeAttribute withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value_formatter")
     public String valueFormatter;
@@ -211,4 +239,5 @@ import dev.epilot.sdk.utils.DateTimeDeserializer;
         this.valueFormatter = valueFormatter;
         return this;
     }
+    
 }

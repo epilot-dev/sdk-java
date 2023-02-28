@@ -1,13 +1,14 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RepeatableAttribute
  * Repeatable (add N number of fields)
-**/public class RepeatableAttribute {
+**/
+public class RepeatableAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_purpose")
     public String[] purpose;
@@ -15,6 +16,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.purpose = purpose;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public java.util.Map<String, Object> constraints;
@@ -22,6 +24,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.constraints = constraints;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_value")
     public Object defaultValue;
@@ -29,6 +32,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.defaultValue = defaultValue;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecated")
     public Boolean deprecated;
@@ -36,6 +40,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.deprecated = deprecated;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable_relation_picker")
     public Boolean enableRelationPicker;
@@ -43,6 +48,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.enableRelationPicker = enableRelationPicker;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_builder_disable_edit")
     public Boolean entityBuilderDisableEdit;
@@ -50,6 +56,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.entityBuilderDisableEdit = entityBuilderDisableEdit;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feature_flag")
     public String featureFlag;
@@ -57,6 +64,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.featureFlag = featureFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public String group;
@@ -64,6 +72,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.group = group;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_primary")
     public Boolean hasPrimary;
@@ -71,6 +80,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.hasPrimary = hasPrimary;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden")
     public Boolean hidden;
@@ -78,6 +88,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.hidden = hidden;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hide_label")
     public Boolean hideLabel;
@@ -85,6 +96,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.hideLabel = hideLabel;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
@@ -92,12 +104,14 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.icon = icon;
         return this;
     }
+    
     @JsonProperty("label")
     public String label;
     public RepeatableAttribute withLabel(String label) {
         this.label = label;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout")
     public String layout;
@@ -105,12 +119,14 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.layout = layout;
         return this;
     }
+    
     @JsonProperty("name")
     public String name;
     public RepeatableAttribute withName(String name) {
         this.name = name;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Long order;
@@ -118,6 +134,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.order = order;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeholder")
     public String placeholder;
@@ -125,6 +142,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.placeholder = placeholder;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preview_value_formatter")
     public String previewValueFormatter;
@@ -132,6 +150,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.previewValueFormatter = previewValueFormatter;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protected")
     public Boolean protected_;
@@ -139,6 +158,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.protected_ = protected_;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readonly")
     public Boolean readonly;
@@ -146,6 +166,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.readonly = readonly;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relation_affinity_mode")
     public RepeatableAttributeRelationAffinityModeEnum relationAffinityMode;
@@ -153,6 +174,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.relationAffinityMode = relationAffinityMode;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("render_condition")
     public String renderCondition;
@@ -160,6 +182,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.renderCondition = renderCondition;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeatable")
     public Boolean repeatable;
@@ -167,6 +190,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.repeatable = repeatable;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
@@ -174,6 +198,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.required = required;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setting_flag")
     public String settingFlag;
@@ -181,6 +206,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.settingFlag = settingFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("show_in_table")
     public Boolean showInTable;
@@ -188,6 +214,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.showInTable = showInTable;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public RepeatableAttributeTypeEnum type;
@@ -195,6 +222,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.type = type;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value_formatter")
     public String valueFormatter;
@@ -202,4 +230,5 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.valueFormatter = valueFormatter;
         return this;
     }
+    
 }

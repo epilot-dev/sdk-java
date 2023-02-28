@@ -1,8 +1,9 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class CartCheckoutConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkback_relation_attribute")
@@ -11,6 +12,7 @@ public class CartCheckoutConfig {
         this.linkbackRelationAttribute = linkbackRelationAttribute;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkback_relation_tags")
     public String[] linkbackRelationTags;
@@ -18,6 +20,7 @@ public class CartCheckoutConfig {
         this.linkbackRelationTags = linkbackRelationTags;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mapping_attributes")
     public Object[] mappingAttributes;
@@ -25,6 +28,7 @@ public class CartCheckoutConfig {
         this.mappingAttributes = mappingAttributes;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mapping_config")
     public MappingConfigRef mappingConfig;
@@ -32,6 +36,7 @@ public class CartCheckoutConfig {
         this.mappingConfig = mappingConfig;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relation_attributes")
     public RelationAttribute1[] relationAttributes;
@@ -39,6 +44,7 @@ public class CartCheckoutConfig {
         this.relationAttributes = relationAttributes;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_unique")
     public String[] targetUnique;
@@ -46,6 +52,7 @@ public class CartCheckoutConfig {
         this.targetUnique = targetUnique;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
@@ -53,4 +60,5 @@ public class CartCheckoutConfig {
         this.version = version;
         return this;
     }
+    
 }

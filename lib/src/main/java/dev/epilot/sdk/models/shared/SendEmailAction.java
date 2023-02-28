@@ -1,8 +1,9 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class SendEmailAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_failure")
@@ -11,6 +12,7 @@ public class SendEmailAction {
         this.allowFailure = allowFailure;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public SendEmailConfig config;
@@ -18,6 +20,7 @@ public class SendEmailAction {
         this.config = config;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_automatically")
     public Boolean createdAutomatically;
@@ -25,6 +28,7 @@ public class SendEmailAction {
         this.createdAutomatically = createdAutomatically;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_output")
     public ErrorOutput errorOutput;
@@ -32,6 +36,7 @@ public class SendEmailAction {
         this.errorOutput = errorOutput;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("execution_status")
     public ExecutionStatusEnum executionStatus;
@@ -39,6 +44,7 @@ public class SendEmailAction {
         this.executionStatus = executionStatus;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flow_action_id")
     public String flowActionId;
@@ -46,6 +52,7 @@ public class SendEmailAction {
         this.flowActionId = flowActionId;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
@@ -53,6 +60,7 @@ public class SendEmailAction {
         this.id = id;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
@@ -60,6 +68,7 @@ public class SendEmailAction {
         this.name = name;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputs")
     public java.util.Map<String, Object> outputs;
@@ -67,6 +76,7 @@ public class SendEmailAction {
         this.outputs = outputs;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retry_strategy")
     public RetryStrategyEnum retryStrategy;
@@ -74,6 +84,7 @@ public class SendEmailAction {
         this.retryStrategy = retryStrategy;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("started_at")
     public String startedAt;
@@ -81,6 +92,7 @@ public class SendEmailAction {
         this.startedAt = startedAt;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public Object type;
@@ -88,6 +100,7 @@ public class SendEmailAction {
         this.type = type;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
@@ -95,4 +108,5 @@ public class SendEmailAction {
         this.updatedAt = updatedAt;
         return this;
     }
+    
 }

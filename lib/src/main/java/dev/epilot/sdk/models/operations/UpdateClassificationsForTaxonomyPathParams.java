@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.operations;
 
 import dev.epilot.sdk.utils.SpeakeasyMetadata;
+
 public class UpdateClassificationsForTaxonomyPathParams {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxonomySlug")
     public String taxonomySlug;
@@ -8,4 +9,5 @@ public class UpdateClassificationsForTaxonomyPathParams {
         this.taxonomySlug = taxonomySlug;
         return this;
     }
+    
 }

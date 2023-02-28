@@ -1,8 +1,9 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class EntityParcelView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("import")
@@ -11,6 +12,7 @@ public class EntityParcelView {
         this.import_ = import_;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("view_type")
     public EntityParcelViewViewTypeEnum viewType;
@@ -18,4 +20,5 @@ public class EntityParcelView {
         this.viewType = viewType;
         return this;
     }
+    
 }

@@ -1,13 +1,14 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * EntityCapability
  * Capabilities the Entity has. Turn features on/off for entities.
-**/public class EntityCapability {
+**/
+public class EntityCapability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_purpose")
     public String[] purpose;
@@ -15,6 +16,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.purpose = purpose;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public Object[] attributes;
@@ -22,6 +24,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.attributes = attributes;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feature_flag")
     public String featureFlag;
@@ -29,6 +32,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.featureFlag = featureFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legacy")
     public Boolean legacy;
@@ -36,12 +40,14 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.legacy = legacy;
         return this;
     }
+    
     @JsonProperty("name")
     public String name;
     public EntityCapability withName(String name) {
         this.name = name;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setting_flag")
     public String settingFlag;
@@ -49,6 +55,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.settingFlag = settingFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
@@ -56,6 +63,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.title = title;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ui_hooks")
     public java.util.Map<String, Object>[] uiHooks;
@@ -63,4 +71,5 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.uiHooks = uiHooks;
         return this;
     }
+    
 }

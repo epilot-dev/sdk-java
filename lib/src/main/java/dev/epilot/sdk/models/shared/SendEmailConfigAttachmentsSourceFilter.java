@@ -1,13 +1,14 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SendEmailConfigAttachmentsSourceFilter
  * Specify filters to match file entities related to main entity
-**/public class SendEmailConfigAttachmentsSourceFilter {
+**/
+public class SendEmailConfigAttachmentsSourceFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribute")
     public String attribute;
@@ -15,6 +16,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.attribute = attribute;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_type")
     public SendEmailConfigAttachmentsSourceFilterDocumentTypeEnum documentType;
@@ -22,6 +24,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.documentType = documentType;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename_regex")
     public String filenameRegex;
@@ -29,6 +32,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.filenameRegex = filenameRegex;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
@@ -36,6 +40,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.limit = limit;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relation_tag")
     public String relationTag;
@@ -43,6 +48,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.relationTag = relationTag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public Boolean self;
@@ -50,6 +56,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.self = self;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
@@ -57,4 +64,5 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.tag = tag;
         return this;
     }
+    
 }

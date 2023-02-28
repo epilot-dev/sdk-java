@@ -1,8 +1,9 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class SearchJourneysQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
@@ -11,6 +12,7 @@ public class SearchJourneysQueryRequest {
         this.from = from;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("q")
     public String q;
@@ -18,6 +20,7 @@ public class SearchJourneysQueryRequest {
         this.q = q;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
@@ -25,6 +28,7 @@ public class SearchJourneysQueryRequest {
         this.size = size;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
     public String sort;
@@ -32,4 +36,5 @@ public class SearchJourneysQueryRequest {
         this.sort = sort;
         return this;
     }
+    
 }

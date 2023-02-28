@@ -1,6 +1,6 @@
 package dev.epilot.sdk.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonValue;
 public enum SendEmailConfigAttachmentsSourceFilterDocumentTypeEnum {
     DOCUMENT("document"),
     TEXT("text"),
@@ -14,6 +14,7 @@ public enum SendEmailConfigAttachmentsSourceFilterDocumentTypeEnum {
     APPLICATION("application"),
     UNKNOWN("unknown");
 
+    @JsonValue
     public final String value;
 
     private SendEmailConfigAttachmentsSourceFilterDocumentTypeEnum(String value) {

@@ -1,13 +1,14 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * EntitySchemaItem
  * The "type" of an Entity. Describes the shape. Includes Entity Attributes, Relations and Capabilities.
-**/public class EntitySchemaItem {
+**/
+public class EntitySchemaItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public Object[] attributes;
@@ -15,6 +16,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.attributes = attributes;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blueprint")
     public String blueprint;
@@ -22,6 +24,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.blueprint = blueprint;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public EntityCapability[] capabilities;
@@ -29,6 +32,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.capabilities = capabilities;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
@@ -36,6 +40,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.comment = comment;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
@@ -43,6 +48,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.createdAt = createdAt;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialog_config")
     public java.util.Map<String, Object> dialogConfig;
@@ -50,6 +56,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.dialogConfig = dialogConfig;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("draft")
     public Boolean draft;
@@ -57,6 +64,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.draft = draft;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable_setting")
     public String[] enableSetting;
@@ -64,6 +72,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.enableSetting = enableSetting;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explicit_search_mappings")
     public java.util.Map<String, SearchMappings> explicitSearchMappings;
@@ -71,6 +80,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.explicitSearchMappings = explicitSearchMappings;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feature_flag")
     public String featureFlag;
@@ -78,6 +88,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.featureFlag = featureFlag;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_settings")
     public EntitySchemaItemGroupSettings[] groupSettings;
@@ -85,6 +96,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.groupSettings = groupSettings;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
@@ -92,6 +104,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.icon = icon;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
@@ -99,6 +112,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.id = id;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layout_settings")
     public java.util.Map<String, Object> layoutSettings;
@@ -106,18 +120,21 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.layoutSettings = layoutSettings;
         return this;
     }
+    
     @JsonProperty("name")
     public String name;
     public EntitySchemaItem withName(String name) {
         this.name = name;
         return this;
     }
+    
     @JsonProperty("plural")
     public String plural;
     public EntitySchemaItem withPlural(String plural) {
         this.plural = plural;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("published")
     public Boolean published;
@@ -125,12 +142,14 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.published = published;
         return this;
     }
+    
     @JsonProperty("slug")
     public String slug;
     public EntitySchemaItem withSlug(String slug) {
         this.slug = slug;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public EntitySchemaItemSource source;
@@ -138,6 +157,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.source = source;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title_template")
     public String titleTemplate;
@@ -145,6 +165,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.titleTemplate = titleTemplate;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ui_config")
     public EntitySchemaItemUiConfig uiConfig;
@@ -152,6 +173,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.uiConfig = uiConfig;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
@@ -159,6 +181,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.updatedAt = updatedAt;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
@@ -166,4 +189,5 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
         this.version = version;
         return this;
     }
+    
 }

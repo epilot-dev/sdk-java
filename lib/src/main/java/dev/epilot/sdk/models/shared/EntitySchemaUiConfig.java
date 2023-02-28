@@ -1,8 +1,9 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class EntitySchemaUiConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("create_view")
@@ -11,6 +12,7 @@ public class EntitySchemaUiConfig {
         this.createView = createView;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("edit_view")
     public Object editView;
@@ -18,6 +20,7 @@ public class EntitySchemaUiConfig {
         this.editView = editView;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_item")
     public EntitySchemaUiConfigListItem listItem;
@@ -25,6 +28,7 @@ public class EntitySchemaUiConfig {
         this.listItem = listItem;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharing")
     public EntitySchemaUiConfigSharing sharing;
@@ -32,6 +36,7 @@ public class EntitySchemaUiConfig {
         this.sharing = sharing;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("single_view")
     public Object singleView;
@@ -39,6 +44,7 @@ public class EntitySchemaUiConfig {
         this.singleView = singleView;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("table_view")
     public Object tableView;
@@ -46,4 +52,5 @@ public class EntitySchemaUiConfig {
         this.tableView = tableView;
         return this;
     }
+    
 }

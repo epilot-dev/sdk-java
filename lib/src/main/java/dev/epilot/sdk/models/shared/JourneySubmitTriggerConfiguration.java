@@ -1,6 +1,7 @@
 package dev.epilot.sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class JourneySubmitTriggerConfiguration {
     @JsonProperty("source_id")
     public String sourceId;
@@ -8,4 +9,5 @@ public class JourneySubmitTriggerConfiguration {
         this.sourceId = sourceId;
         return this;
     }
+    
 }

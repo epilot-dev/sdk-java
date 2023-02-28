@@ -1,8 +1,9 @@
 package dev.epilot.sdk.models.shared;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class EntityDefaultCreateTableMenuOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
@@ -11,6 +12,7 @@ public class EntityDefaultCreateTableMenuOptions {
         this.icon = icon;
         return this;
     }
+    
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
@@ -18,4 +20,5 @@ public class EntityDefaultCreateTableMenuOptions {
         this.label = label;
         return this;
     }
+    
 }
